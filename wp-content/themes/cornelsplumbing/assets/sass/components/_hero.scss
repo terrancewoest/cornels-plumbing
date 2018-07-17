@@ -1,0 +1,69 @@
+.hero {
+    margin-top: -$headerHeight;
+    margin-bottom: 62px;
+    height: $heroHeight;
+    position: relative;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+.hero-content {
+    height: $heroHeight;
+
+    .container {
+        padding-top: $headerHeight;
+        padding-bottom: $headerHeight;
+    }
+
+    h1 {
+        color: $colorDark;
+        font-size: 36px;
+        font-weight: $fontBold;
+        line-height: 1.4em;
+        margin-bottom: $gutter;
+
+        .highlight {
+            display: block;
+            font-size: 42px;
+            color: $colorPrimary;
+        }
+    }
+}
+
+.hero-card {
+    padding: $gutter/3;
+    width: 800px;
+    max-width: calc(100% - #{$gutter});
+    background: $colorLight;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(50%);
+    border-radius: 3px;
+    @include shadow;
+
+    img {
+        height: 110px;
+        width: auto;
+    }
+}

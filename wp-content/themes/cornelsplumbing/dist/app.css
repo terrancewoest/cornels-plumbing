@@ -1,0 +1,202 @@
+/* Common/Global Items */
+
+/* Sizing */
+
+/* Colors */
+
+/* Break Points */
+
+/* Fonts */
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+}
+
+/* Components */
+
+.topbar {
+  color: rgba(255, 255, 255, 0.8);
+  background: #4285E3;
+  height: 30px;
+  line-height: 30px;
+}
+
+.topbar p {
+  margin: 0;
+}
+
+.topbar a {
+  color: inherit;
+}
+
+.topbar a:hover {
+  color: #fff;
+}
+
+.topbar-social {
+  font-size: 20px;
+}
+
+.topbar-social a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.nav.nav-main {
+  font-size: 18px;
+  height: 100px;
+}
+
+.nav-main .nav-link {
+  font-weight: 600;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #333;
+}
+
+.nav-main .nav-link:hover {
+  color: #4285E3;
+}
+
+.header {
+  height: 100px;
+  z-index: 10;
+  position: relative;
+}
+
+.header.header-front {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+}
+
+.hero {
+  margin-top: -100px;
+  margin-bottom: 62px;
+  height: 600px;
+  position: relative;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.hero-background img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.hero-content {
+  height: 600px;
+}
+
+.hero-content .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hero-content h1 {
+  color: #2B2B2B;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4em;
+  margin-bottom: 30px;
+}
+
+.hero-content h1 .highlight {
+  display: block;
+  font-size: 42px;
+  color: #4285E3;
+}
+
+.hero-card {
+  padding: 10px;
+  width: 800px;
+  max-width: calc(100% - 30px);
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  border-radius: 3px;
+  -webkit-box-shadow: 5px 5px 25px -8px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 25px -8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-card img {
+  height: 110px;
+  width: auto;
+}
+
+.logo {
+  display: block;
+}
+
+.logo.logo-hero {
+  width: 380px;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  margin-right: 60px;
+}
+
+.btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+  -webkit-box-shadow: 5px 5px 25px -8px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 25px -8px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 5px 5px 20px -3px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 20px -3px rgba(0, 0, 0, 0.3);
+}
+
+.btn-highlight {
+  color: #fff;
+  background: #ED624A;
+  border-color: #ED624A;
+}
+
+.btn-highlight:hover {
+  color: #fff;
+}
+
+.btn-hero {
+  font-size: 22px;
+  width: 480px;
+  display: block;
+  margin-right: auto;
+  height: 50px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.btn-hero:not(:last-child) {
+  margin-bottom: 15px;
+}
+

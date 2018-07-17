@@ -1,0 +1,25 @@
+.topbar {
+    color: rgba($colorLight, .8);
+    background: $colorPrimary;
+    height: $gutter;
+    line-height: $gutter;
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: inherit;
+        &:hover {
+            color: $colorLight;
+        }
+    }
+}
+
+.topbar-social {
+    font-size: 20px;
+
+    a:not(:last-child) {
+        margin-right: $gutter/3;
+    }
+}

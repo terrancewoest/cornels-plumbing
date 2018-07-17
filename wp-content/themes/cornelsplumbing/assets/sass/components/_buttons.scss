@@ -1,0 +1,35 @@
+.btn {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 2px solid;
+    border-radius: 3px;
+    transition: all .15s ease;
+    @include shadow;
+
+    &:hover {
+        transform: translateY(-2px);
+        @include shadowHover;
+    }
+}
+
+.btn-highlight {
+    color: $colorLight;
+    background: $colorHighlight;
+    border-color: $colorHighlight;
+    &:hover {
+        color: $colorLight;
+    }
+}
+
+.btn-hero {
+    font-size: 22px;
+    width: 480px;
+    display: block;
+    margin-right: auto;
+    height: 50px;
+    line-height: 50px - 2px;
+    font-weight: $fontBold;
+    &:not(:last-child) {
+        margin-bottom: $gutter/2;
+    }
+}

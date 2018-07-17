@@ -21,3 +21,7 @@ wp-content/plugins/hello.php
 
 # Theme Items
 wp-content/themes/cornelsplumbing/node_modules*
+.npmrc
+
+# SFTP
+sftp-config*.json

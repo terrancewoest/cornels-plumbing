@@ -1,0 +1,11 @@
+.logo {
+    display: block;
+
+    &.logo-hero {
+        width: 380px;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        margin-right: $gutter*2;
+    }
+}
