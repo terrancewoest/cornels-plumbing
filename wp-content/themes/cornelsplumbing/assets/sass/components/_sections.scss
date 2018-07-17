@@ -1,0 +1,55 @@
+.section {
+    padding-top: $gutter*3;
+    padding-bottom: $gutter*3;
+
+    &.section-services {
+        padding-top: $gutter*3 + 62px;
+        background: linear-gradient(to bottom, #{$colorLightAlt}, #{$colorLight});
+        .container {
+            max-width: $breakDesktop - $gutter;
+        }
+    }
+}
+
+.section-tag {
+    padding: 0 $gutter/2;
+    line-height: $gutter;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: $colorGrayDarkest;
+    color: $colorLight;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: $fontBold;
+    margin-bottom: $gutter/2;
+}
+
+.section-title {
+    font-weight: $fontBold;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-bottom: $gutter/2;
+}
+
+.section-text {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $colorGrayDarker;
+    font-size: 18px;
+    margin-bottom: $gutter*1.5;
+}
+
+.section-subtitle {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $gutter;
+    font-size: 16px;
+    line-height: 1.7em;
+    color: $colorGrayDarker;
+}
+
+.section-block {
+    margin-bottom: $gutter;
+}

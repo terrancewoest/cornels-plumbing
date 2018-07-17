@@ -24,7 +24,7 @@ function cp_enqueue_assets() {
     wp_enqueue_script('jquery');
 
     // Bootstrap Javascript
-    wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper.min.js', ['jquery'], null, true);
+    wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', ['jquery'], null, true);
     wp_enqueue_script('bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js', ['jquery', 'popper'], null, true);
 
     // Bootstrap CSS

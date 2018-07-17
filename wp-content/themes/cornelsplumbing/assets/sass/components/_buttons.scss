@@ -1,35 +1,48 @@
 .btn {
     padding-top: 0;
     padding-bottom: 0;
+    padding-left: $gutter*1.5;
+    padding-right: $gutter*1.5;
     border: 2px solid;
     border-radius: 3px;
     transition: all .15s ease;
+    line-height: $gutter*2 - 4px;
+    font-weight: $fontBold;
+    letter-spacing: 1px;
     @include shadow;
 
     &:hover {
         transform: translateY(-2px);
         @include shadowHover;
     }
-}
 
-.btn-highlight {
-    color: $colorLight;
-    background: $colorHighlight;
-    border-color: $colorHighlight;
-    &:hover {
+    &.btn-primary {
+        background: $colorPrimary;
+        border-color: $colorPrimary;
         color: $colorLight;
     }
-}
 
-.btn-hero {
-    font-size: 22px;
-    width: 480px;
-    display: block;
-    margin-right: auto;
-    height: 50px;
-    line-height: 50px - 2px;
-    font-weight: $fontBold;
-    &:not(:last-child) {
-        margin-bottom: $gutter/2;
+    &.btn-highlight {
+        color: $colorLight;
+        background: $colorHighlight;
+        border-color: $colorHighlight;
+        &:hover {
+            color: $colorLight;
+        }
+    }
+
+    &.btn-hero {
+        font-size: 22px;
+        padding: 0;
+        width: 480px;
+        display: block;
+        margin-right: auto;
+        height: 50px;
+        line-height: 50px - 2px;
+        font-weight: $fontBold;
+        &:not(:last-child) {
+            margin-bottom: $gutter/2;
+        }
     }
 }
+

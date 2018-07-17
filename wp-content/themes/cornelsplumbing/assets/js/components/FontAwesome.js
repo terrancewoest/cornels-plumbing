@@ -34,7 +34,7 @@ import fontawesome from '@fortawesome/fontawesome';
 // import farCircle from '@fortawesome/fontawesome-pro-regular/faCircle';
 
 // Import Solid Icons
-// import fasEye from '@fortawesome/fontawesome-pro-solid/faEye';
+import fasUsers from '@fortawesome/fontawesome-pro-solid/faUsers';
 
 // Import Brand Icons
 import fabFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare';
@@ -44,7 +44,11 @@ import fabInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
 
 // Add them to the font awesome library.
 fontawesome.library.add(
+
+    fasUsers,
+
     fabFacebookSquare,
     fabTwitterSquare,
     fabInstagram,
+
 );
