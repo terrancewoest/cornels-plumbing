@@ -4,6 +4,30 @@
         font-size: 18px;
         height: $headerHeight;
     }
+
+    &.nav-blog {
+        font-size: 28px;
+    }
+
+    &.nav-sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0 $gutter;
+        background: $colorLight;
+        height: 0;
+        opacity: 0;
+        transition: height 0s .15s , opacity .15s ease;
+        overflow: hidden;
+        @include shadow;
+
+        &.stuck {
+        transition: height 0s, opacity .15s ease;
+            height: $headerHeight;
+            opacity: 1;
+        }
+    }
 }
 
 .nav-link {
@@ -12,10 +36,46 @@
         font-weight: $fontSemibold;
         padding-top: $gutter/2;
         padding-bottom: $gutter/2;
-
         color: $colorGrayDarkest;
+
         &:hover {
             color: $colorPrimary;
         }
+    }
+
+    .nav-blog & {
+        padding: 0 0 0 $gutter;
+        position: relative;
+        color: $colorDark;
+
+        &:hover {
+            color: $colorPrimary;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $gutter;
+            &:after {
+                position: absolute;
+                content: '';
+                height: 1px;
+                width: $gutter*3;
+                bottom: -$gutter/2;
+                left: $gutter;
+                background: $colorPrimary;
+            }
+        }
+    }
+}
+
+.nav-icon {
+    .nav-blog & {
+        line-height: $gutter;
+        height: $gutter;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        left: 0
     }
 }

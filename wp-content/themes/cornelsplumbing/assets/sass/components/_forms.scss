@@ -1,0 +1,50 @@
+.frm_forms {
+    text-align: left;
+
+    .frm_form_field {
+        margin-bottom: $gutter;
+
+        input:not([type=file]) {
+            background: $colorGrayLightest;
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 0 $gutter/2;
+            line-height: $gutter*1.5;
+            height: $gutter*1.5;
+        }
+
+        textarea {
+            background: $colorGrayLightest;
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 0 $gutter/2;
+            line-height: $gutter*1.5;
+        }
+    }
+
+    .frm_primary_label,
+    .impersonate-label {
+        display: block;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: $colorGrayDarker;
+    }
+
+    p {
+        font-size: 18px;
+        color: $colorGrayDark;
+        line-height: 1.2em;
+    }
+
+    .frm_submit {
+        clear: both;
+        text-align: center;
+    }
+
+    .g-recaptcha > * {
+        margin: auto;
+    }
+}

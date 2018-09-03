@@ -3,5 +3,22 @@ body {
 }
 
 a {
+    color: $colorPrimary;
     transition: all .15s ease;
+
+    &:hover {
+        color: darken($colorPrimary, 10);
+    }
+
+    .icon {
+        transform: translateY(2px);
+        font-size: 1.1em;
+        &:last-child {
+            margin-left: 4px;
+        }
+        &:first-child {
+            margin-left: 4px;
+        }
+    }
+
 }

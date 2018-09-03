@@ -31,10 +31,13 @@
 import fontawesome from '@fortawesome/fontawesome';
 
 // Import Regular icons.
-// import farCircle from '@fortawesome/fontawesome-pro-regular/faCircle';
+import farClock from '@fortawesome/fontawesome-pro-regular/faClock';
+import farAngleRight from '@fortawesome/fontawesome-pro-regular/faAngleRight';
 
 // Import Solid Icons
 import fasUsers from '@fortawesome/fontawesome-pro-solid/faUsers';
+import fasPlus from '@fortawesome/fontawesome-pro-solid/faPlus';
+import fasCaretRight from '@fortawesome/fontawesome-pro-solid/faCaretRight';
 
 // Import Brand Icons
 import fabFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare';
@@ -44,8 +47,12 @@ import fabInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
 
 // Add them to the font awesome library.
 fontawesome.library.add(
+    farClock,
+    farAngleRight,
 
     fasUsers,
+    fasPlus,
+    fasCaretRight,
 
     fabFacebookSquare,
     fabTwitterSquare,

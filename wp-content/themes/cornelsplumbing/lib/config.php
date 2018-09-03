@@ -14,16 +14,23 @@
  */
 function cp_all_config() {
     return [
+        'brand' => [
+            'phone' => '(503) 123-1234',
 
-        'phone' => '(503) 123-1324',
+            'email' => 'contact@cornelsplumbing.com',
 
-        'email' => 'contact@cornelsplumbing.com',
+            'hours' => [
+                'weekstart' => 'mon',
+                'weekend'   => 'fri',
+                'timestart' => 9,
+                'timeend'   => 17,
+                'formatted' => 'Open Mon-Fri 9am-5pm',
+            ],
+        ],
 
-        'hours' => [
-            'weekstart' => 'mon',
-            'weekend'   => 'fri',
-            'timestart' => 9,
-            'timeend'   => 17,
+        'google' => [
+            'api-key' => GOOGLE_API_KEY,
+            'place-id' => GOOGLE_PLACE_ID,
         ],
 
     ];

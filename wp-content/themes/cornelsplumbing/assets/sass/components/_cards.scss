@@ -1,0 +1,133 @@
+.card {
+    border-radius: 3px;
+
+    &.card-shadow {
+        border: none;
+        border-radius: 3px;
+        @include shadow;
+    }
+
+    &.card-action {
+        transition: all .15s ease;
+        &:hover {
+            @include shadowHover;
+            transform: translateY(-2px);
+        }
+    }
+
+    &.card-coupon {
+        background: none;
+        border: 2px dashed $colorLight;
+        padding: $gutter/6;
+    }
+
+}
+
+.card-image {
+
+    .card-testimonial & {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.card-body {
+
+    .card-action & {
+        text-align: center;
+        border: 2px dashed;
+        padding: $gutter $gutter/3;
+        margin: $gutter/3;
+        color: inherit;
+        border-radius: 3px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .card-coupon & {
+        background: rgba($colorLight, .2);
+    }
+}
+
+.card-icon {
+    .card-action & {
+        font-size: 42px;
+    }
+}
+
+.card-title {
+    .card-action & {
+        font-weight: $fontBold;
+        font-size: 32px;
+        color: $colorGrayDarkest;
+    }
+
+    .card-coupon & {
+        @include textShadow;
+        font-size: 47px;
+        font-weight: $fontBold;
+        position: relative;
+        padding-bottom: $gutter/2;
+        &:after {
+            content: '';
+            background: $colorLight;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 4px;
+            width: 75px;
+        }
+    }
+
+    .card-accent & {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: $fontBold;
+        color: $colorGrayDarkest;
+        padding-bottom: $gutter/2;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 50px;
+        }
+    }
+    .card-accent-primary & {
+        &:after {
+            background: $colorPrimary;
+        }
+    }
+    .card-accent-highlight & {
+        &:after {
+            background: $colorHighlight;
+        }
+    }
+}
+
+.card-text {
+    .card-action & {
+        color: $colorGrayDarkest;
+    }
+
+    .card-coupon & {
+        font-size: 27px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+.card-link {
+    .card-accent & {
+        font-size: 18px;
+        font-weight: $fontBold;
+    }
+    .card-accent-highlight & {
+        color: $colorHighlight;
+    }
+}

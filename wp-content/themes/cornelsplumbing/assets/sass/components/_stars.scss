@@ -1,0 +1,60 @@
+.stars {
+    display: block;
+    height: 16px;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        content: '';
+        height: 100%;
+        width: 91px;
+        background: url('#{$imagePath}/5-stars-empty.png') no-repeat left center;
+        background-size: contain;
+    }
+
+    .rating {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        &:before {
+            display: block;
+            content: '';
+            height: 100%;
+            width: 91px;
+            background: url('#{$imagePath}/5-stars.png') no-repeat left center;
+            background-size: contain;
+        }
+
+    }
+
+    &.stars-1 {
+        .rating {
+            width: 18px;
+        }
+    }
+    &.stars-2 {
+        .rating {
+            width: 36px;
+        }
+    }
+    &.stars-3 {
+        .rating {
+            width: 54px;
+        }
+    }
+    &.stars-4 {
+        .rating {
+            width: 72px;
+        }
+    }
+    &.stars-5 {
+        .rating {
+            width: 91px;
+        }
+    }
+}

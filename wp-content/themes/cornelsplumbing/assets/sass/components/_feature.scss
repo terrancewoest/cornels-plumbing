@@ -1,5 +1,5 @@
 .feature {
-    margin-bottom: $gutter;
+
     > * {
         margin-top: 0;
         margin-bottom: $gutter/2;
@@ -36,5 +36,20 @@
         font-size: 16px;
         margin-top: 0;
         line-height: 1.5em;
+    }
+
+    &.feature-small-icon {
+
+        .icon {
+            background: none;
+            height: initial;
+            width: initial;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: $fontSemibold;
+            color: $colorGrayDarker;
+        }
     }
 }

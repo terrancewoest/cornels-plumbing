@@ -1,12 +1,46 @@
 .section {
     padding-top: $gutter*3;
     padding-bottom: $gutter*3;
+    position: relative;
 
     &.section-services {
         padding-top: $gutter*3 + 62px;
         background: linear-gradient(to bottom, #{$colorLightAlt}, #{$colorLight});
+
         .container {
             max-width: $breakDesktop - $gutter;
+        }
+    }
+
+    &.section-testimonials {
+        background: $colorLightAlt url('#{$imagePath}/testimonials-background.jpg') no-repeat top left;
+    }
+
+    &.section-coupon {
+        padding-top: $gutter;
+        border: $gutter/3 solid rgba($colorLight, .25);
+        padding-bottom: $gutter;
+    }
+
+    &.section-blog {
+        background: linear-gradient(to bottom, #{$colorLightAlt}, #{$colorLight});
+    }
+
+    &.section-about {
+        background: $colorLightAlt;
+        padding-top: 0;
+        padding-bottom: $gutter;
+
+        .row {
+            padding-top: $gutter*3;
+        }
+    }
+
+    &.section-quote {
+        border: $gutter/3 solid $colorPrimary;
+
+        .container-skinny {
+            max-width: $breakTablet - $gutter;
         }
     }
 }
@@ -28,7 +62,39 @@
     font-weight: $fontBold;
     font-size: 32px;
     letter-spacing: 1px;
-    margin-bottom: $gutter/2;
+
+    .section-testimonials & {
+        font-size: 25px;
+        line-height: 1.5em;
+        max-width: 780px;
+    }
+
+    .section-coupon & {
+        color: rgba($colorLight, .7);
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+            &:hover {
+                color: $colorLight;
+            }
+        }
+
+        .emphasis {
+            font-size: 36px;
+            color: $colorLight;
+        }
+    }
+
+    .section-preventative & {
+        font-size: 24px;
+    }
+}
+
+.section-heading {
+    font-weight: $fontBold;
+    font-size: 24px;
+    letter-spacing: .5px;
 }
 
 .section-text {
@@ -37,19 +103,40 @@
     margin-right: auto;
     color: $colorGrayDarker;
     font-size: 18px;
-    margin-bottom: $gutter*1.5;
 }
 
 .section-subtitle {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: $gutter;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: $fontSemibold;
     line-height: 1.7em;
-    color: $colorGrayDarker;
+    color: $colorGrayDarkest;
 }
 
 .section-block {
-    margin-bottom: $gutter;
+    &:not(:last-child) {
+        margin-bottom: $gutter*2;
+    }
+}
+
+.section-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    img {
+        margin: auto;
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .section-about & {
+        top: $gutter;
+        left: $gutter;
+        right: $gutter;
+    }
 }

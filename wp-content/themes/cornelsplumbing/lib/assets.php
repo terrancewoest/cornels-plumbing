@@ -20,7 +20,7 @@ function cp_enqueue_assets() {
 
     // Swap local for CDN version of jQuery
     wp_deregister_script('jquery');
-    wp_register_script('jquery' , 'https://code.jquery.com/jquery-3.3.1.slim.min.js', false, null, true);
+    wp_register_script('jquery' , 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js', false, null, true);
     wp_enqueue_script('jquery');
 
     // Bootstrap Javascript
@@ -29,6 +29,11 @@ function cp_enqueue_assets() {
 
     // Bootstrap CSS
     wp_enqueue_style('bootstrap-css', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css');
+
+    // Google Api
+    if (is_front_page()) {
+        wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=' . cp_config('google.api-key') . '&libraries=places');
+    }
 
     // Theme's Javascript
     wp_enqueue_script('cp-js', get_template_directory_uri() . '/dist/app.js', ['jquery', 'bootstrap'], null, true);

@@ -2,6 +2,7 @@
     margin-top: -$headerHeight;
     height: $heroHeight;
     position: relative;
+    z-index: 1;
 }
 
 .hero-background {

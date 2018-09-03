@@ -3,6 +3,7 @@
 
 @import 'common/variables';
 @import 'common/mixins';
+@import 'common/helpers';
 @import 'common/typography';
 
 
@@ -11,8 +12,12 @@
 @import 'components/topbar';
 @import 'components/nav';
 @import 'components/header';
+@import 'components/footer';
 @import 'components/hero';
 @import 'components/logo';
 @import 'components/buttons';
 @import 'components/sections';
 @import 'components/feature';
+@import 'components/cards';
+@import 'components/stars';
+@import 'components/forms';

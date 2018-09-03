@@ -14,10 +14,11 @@ $colorHighlight: #ED624A;
 $colorLight: #fff;
 $colorLightAlt: #F7F8FA;
 $colorDark: #2B2B2B;
+$colorBlack: #000;
 
 $colorGrayDarkest: #333;
 $colorGrayDarker: #555;
-$colorGrayDarker: #777;
+$colorGrayDark: #777;
 $colorGray: #999;
 $colorGrayLight: #bbb;
 $colorGrayLighter: #ddd;
@@ -42,3 +43,6 @@ $fontPrimary: 'Source Sans Pro', sans-serif;
 $fontRegular: 400;
 $fontSemibold: 600;
 $fontBold: 700;
+
+/* Miscellaneous */
+$imagePath: '/wp-content/themes/cornelsplumbing/assets/images';
