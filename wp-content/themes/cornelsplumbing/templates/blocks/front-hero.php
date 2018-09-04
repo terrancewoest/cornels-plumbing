@@ -15,8 +15,8 @@
                         <span class="highlight">Licensed, Local, and Family Run</span>
                         plumbers for the last 35+ years.
                     </h1>
-                    <a class="btn btn-highlight btn-hero" href="#">Schedule a FREE Quote Online</a>
-                    <a class="btn btn-outline-dark btn-hero" href="#">... or just call us <?php echo cp_config('brand.phone'); ?></a>
+                    <a class="btn btn-highlight btn-hero scroll-to header-offset" href="#quote">Schedule a FREE Quote Online</a>
+                    <a class="btn btn-outline-dark btn-hero" href="tel:<?php echo cp_config('brand.phone'); ?>">... or just call us <?php echo cp_config('brand.phone'); ?></a>
                 </div>
             </div>
         </div>

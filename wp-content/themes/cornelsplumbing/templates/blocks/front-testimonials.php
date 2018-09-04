@@ -1,6 +1,7 @@
-<section class="section section-testimonials">
-    <div class="container">
+<section id="testimonials" class="section section-testimonials" data-highlight-nav="testimonials">
+    <div class="top-anchor"></div>
 
+    <div class="container">
         <div class="section-block">
             <h2 class="section-tag">Testimonials</h2>
 
@@ -20,7 +21,7 @@
             <div class="row mb-5">
                 <div class="col">
                     <div class="feature feature-small-icon">
-                        <div class="icon color-secondary">
+                        <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
                         </div>
                         <p>Always on-time and prepared</p>
@@ -28,7 +29,7 @@
                 </div>
                 <div class="col">
                     <div class="feature feature-small-icon">
-                        <div class="icon color-secondary">
+                        <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
                         </div>
                         <p>Always on-time and prepared</p>
@@ -36,7 +37,7 @@
                 </div>
                 <div class="col">
                     <div class="feature feature-small-icon">
-                        <div class="icon color-secondary">
+                        <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
                         </div>
                         <p>Always on-time and prepared</p>
@@ -44,7 +45,7 @@
                 </div>
                 <div class="col">
                     <div class="feature feature-small-icon">
-                        <div class="icon color-secondary">
+                        <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
                         </div>
                         <p>Always on-time and prepared</p>
@@ -52,7 +53,7 @@
                 </div>
                 <div class="col">
                     <div class="feature feature-small-icon">
-                        <div class="icon color-secondary">
+                        <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
                         </div>
                         <p>Always on-time and prepared</p>
@@ -64,6 +65,7 @@
                 We only work with the best materials available and provide a 1 year guarantee on all labor. We never compromise quality for time and give all our clients realistic schedules that accommodate their lives. We strive for honest customer service, so contracts are only paid in full when the finished work is to your complete satisfaction.
             </p>
         </div>
-
     </div>
+
+    <div class="bottom-anchor"></div>
 </section>

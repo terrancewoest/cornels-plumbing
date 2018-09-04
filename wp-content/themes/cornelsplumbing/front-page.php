@@ -16,11 +16,11 @@ get_template_part('templates/blocks/front-testimonials');
 // Coupon
 get_template_part('templates/blocks/front-coupon');
 
-// Preventative Services
-get_template_part('templates/blocks/front-blog');
-
 // About
 get_template_part('templates/blocks/front-about');
+
+// Cornel's Tips and Tricks
+get_template_part('templates/blocks/front-blog');
 
 // Social Section
 get_template_part('templates/blocks/front-social');

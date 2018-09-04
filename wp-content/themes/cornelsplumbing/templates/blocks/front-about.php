@@ -1,4 +1,6 @@
-<section class="section section-about">
+<section id="about" class="section section-about" data-highlight-nav="about">
+    <div class="top-anchor"></div>
+
     <div class="section-background">
         <img src="<?php cp_asset('/images/about-background.jpg'); ?>">
     </div>
@@ -7,7 +9,7 @@
         <div class="row">
             <div class="col-sm-6">
 
-                <div class="card">
+                <div class="card card-shadow">
                     <div class="card-body">
                         <h2 class="section-tag">About Cornel's Plumbing</h2>
 
@@ -29,7 +31,7 @@
 
             <div class="col">
 
-                <div class="card">
+                <div class="card card-shadow">
                     <div class="card-body">
                         <h2 class="section-tag">Cornel's Story</h2>
 
@@ -43,4 +45,5 @@
         </div>
     </div>
 
+    <div class="bottom-anchor"></div>
 </section>

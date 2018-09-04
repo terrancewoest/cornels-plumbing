@@ -1,4 +1,6 @@
-<section class="section section-blog">
+<section id="blog" class="section section-blog" data-highlight-nav="blog">
+    <div class="top-anchor"></div>
+
     <div class="container">
         <div class="row align-items-center">
             <div class="col-5 offset-1">
@@ -31,4 +33,6 @@
             </div>
         </div>
     </div>
+
+    <div class="bottom-anchor"></div>
 </section>

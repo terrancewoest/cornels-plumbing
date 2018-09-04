@@ -12,3 +12,7 @@ StickyNav.init();
 // Set up pulling in testimonials from Google
 import Testimonials from './components/Testimonials.js';
 Testimonials.init();
+
+// General UI Items
+import UI from './components/UI.js';
+UI.init();

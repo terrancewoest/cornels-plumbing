@@ -20,7 +20,7 @@ function cp_enqueue_assets() {
 
     // Swap local for CDN version of jQuery
     wp_deregister_script('jquery');
-    wp_register_script('jquery' , 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js', false, null, true);
+    wp_register_script('jquery' , 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, null, true);
     wp_enqueue_script('jquery');
 
     // Bootstrap Javascript

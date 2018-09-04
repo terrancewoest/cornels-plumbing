@@ -1,61 +1,89 @@
-
 /*
 |--------------------------------------------------------------------------
 | Font Awesome Icons
 |--------------------------------------------------------------------------
 |
-| This file handles adding any needed font awesom icons. Be sure to
-| note whether the icon you are using is regular, light, solid,
-| or brands. Note that if you are including brand icons the
-| library you pull in is fontawesome free not pro.
+| This file handles adding any needed font awesome icons. Be sure to
+| use an import alias specifiying regular, light, solid, or brand
+| so that we can use multiple version of the same icon. If you
+| are including brand icons note they use the free library.
+|
+| EXAMPLE IMPORTS
 |
 | Regular:
-|   import {farIconName} from @fortawesome/fontawesome-pro-regular/{faIconName}
+|   import { 'faIconName' as 'farIconName' } from @fortawesome/free-solid-svg-icons
 |   <i class="far fa-{icon-name}"></i>
 |
 | Light:
-|   import {falIconName} from @fortawesome/fontawesome-pro-light/{faIconName}
+|   import { 'faIconName' as 'falIconName' } from @fortawesome/pro-light-svg-icons
 |   <i class="fal fa-{icon-name}"></i>
 |
 | Solid:
-|   import {fasIconName} from @fortawesome/fontawesome-pro-solid/{faIconName}
+|   import { 'faIconName' as 'fasIconName' } from @fortawesome/fontawesome-pro-solid/{faIconName}
 |   <i class="fas fa-{icon-name}"></i>
 |
-| Brand (note free library in import):
-|   import {fabIconName} from @fortawesome/fontawesome-free-brands/{faIconName}
+| Brand (Note free library in import):
+|   import { 'faIconName' as 'fabIconName' } from @fortawesome/fontawesome-free-brands/{faIconName}
 |   <i class="fab fa-{icon-name}"></i>
 |
 */
 
+
 // Bring in font awesome js library.
-import fontawesome from '@fortawesome/fontawesome';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+
+
+// Import Light Icons.
+// import {
+//     faSearch as falSearch
+// } from '@fortawesome/pro-light-svg-icons';
 
 // Import Regular icons.
-import farClock from '@fortawesome/fontawesome-pro-regular/faClock';
-import farAngleRight from '@fortawesome/fontawesome-pro-regular/faAngleRight';
+import {
+    faClock as farClock,
+    faAngleRight as farAngleRight,
+} from '@fortawesome/pro-regular-svg-icons';
 
 // Import Solid Icons
-import fasUsers from '@fortawesome/fontawesome-pro-solid/faUsers';
-import fasPlus from '@fortawesome/fontawesome-pro-solid/faPlus';
-import fasCaretRight from '@fortawesome/fontawesome-pro-solid/faCaretRight';
+import {
+    faUsers as fasUsers,
+    faPlus as fasPlus,
+    faCaretRight as fasCaretRight,
+    faCaretUp as fasCaretUp,
+} from '@fortawesome/pro-solid-svg-icons';
 
 // Import Brand Icons
-import fabFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare';
-import fabTwitterSquare from '@fortawesome/fontawesome-free-brands/faTwitterSquare';
-import fabInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
+import {
+    faFacebookSquare as fabFacebookSquare,
+    faTwitterSquare as fabTwitterSquare,
+    faInstagram as fabInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 
-// Add them to the font awesome library.
-fontawesome.library.add(
+// Add the aliased icons to the library.
+library.add(
+
+    // Light Icons
+    // falSearch,
+
+    // Regular Icons
     farClock,
     farAngleRight,
 
+    // Solid Icons
     fasUsers,
     fasPlus,
     fasCaretRight,
+    fasCaretUp,
 
+    // Brand Icons
     fabFacebookSquare,
     fabTwitterSquare,
     fabInstagram,
 
 );
+
+
+// Run the dom watch to replace any existing <i> tags with <svg> and set
+// up a MutationObserver to continue doing this as the DOM changes.
+dom.watch();

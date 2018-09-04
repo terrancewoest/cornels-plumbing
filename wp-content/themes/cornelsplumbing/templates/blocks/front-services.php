@@ -1,4 +1,6 @@
-<section class="section section-services text-center">
+<section id="services" class="section section-services text-center" data-highlight-nav="services">
+    <div class="top-anchor"></div>
+
     <div class="container">
         <h2 class="section-tag">Our Services</h2>
 
@@ -9,71 +11,93 @@
         <div class="section-block">
             <div class="row mb-4">
                 <div class="col">
-                    <div class="feature feature-icon">
-                        <div class="icon">
+                    <a href="#" class="feature feature-hover">
+                        <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
                         <h4>Name of service</h4>
                         <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    </div>
-                </div>
-
-                <div class="col mb-4">
-                    <div class="feature feature-icon">
-                        <div class="icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col">
-                    <div class="feature feature-icon">
-                        <div class="icon">
+                    <a href="#" class="feature feature-hover">
+                        <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
                         <h4>Name of service</h4>
                         <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    </div>
+                    </a>
+                </div>
+
+                <div class="col mb-4">
+                    <a href="#" class="feature feature-hover">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Name of service</h4>
+                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#" class="feature feature-hover">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Name of service</h4>
+                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    </a>
                 </div>
             </div>
 
-        <div class="row">
-            <div class="col">
-                <div class="feature feature-icon">
-                    <div class="icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4>Name of service</h4>
-                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <div class="row">
+                <div class="col">
+                    <a href="#" class="feature feature-hover">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Name of service</h4>
+                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    </a>
                 </div>
-            </div>
 
-            <div class="col">
-                <div class="feature feature-icon">
-                    <div class="icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4>Name of service</h4>
-                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <div class="col">
+                    <a href="#" class="feature feature-hover">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Name of service</h4>
+                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    </a>
                 </div>
-            </div>
 
-            <div class="col">
-                <div class="feature feature-icon">
-                    <div class="icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4>Name of service</h4>
-                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <div class="col">
+                    <a href="#" class="feature feature-hover">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Name of service</h4>
+                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#" class="feature feature-hover">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Name of service</h4>
+                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    </a>
                 </div>
             </div>
-        </div>
         </div>
 
         <p class="section-subtitle mb-4">Don't see what you need? these are common jobs, but definitely not the extent of what we do. Doesn't hurt to call us! <a href="tel:<?php echo cp_config('phone'); ?>"><?php echo cp_config('phone'); ?></a></p>
 
         <a href="#" class="btn btn-lg btn-primary">Get a FREE quote online</a>
     </div>
+
+    <div class="bottom-anchor"></div>
 </section>

@@ -1,4 +1,4 @@
-<section class="section section-quote text-center">
+<section id="quote" class="section section-quote text-center">
     <div class="container mb-5">
         <h2 class="section-tag">Schedule Appointment</h2>
 
