@@ -6,15 +6,26 @@
 | These are all the general UI javascript helpers
 */
 
-let UI = {
+import 'sticky-kit/dist/sticky-kit.js';
+
+let UiHelpers = {
+
+    // Height of the header in pixels.
+    headerHeight: 100,
+
+    // Offset from the top of the viewport for sticky items.
+    stickyOffset: 30,
 
     // All the scroll to link jquery objects.
     scrollToLinks: null,
-    headerHeight: 100,
+
+    // All sticky items on the page.
+    stickyItems: null,
 
     // All selectors needed by the object.
     selectors: {
         scrollTo: '.scroll-to',
+        stickyItem: '.is-sticky',
     },
 
     /**
@@ -27,6 +38,11 @@ let UI = {
             this.activateScrollToLinks();
         }
 
+        // Only run this file if the sticky class is in the dom.
+        this.stickyItems = $(this.selectors.stickyItem)
+        if (this.stickyItems.length) {
+            this.activateStickyItems();
+        }
     },
 
     /**
@@ -44,7 +60,7 @@ let UI = {
 
             // Header offset for sticky nav.
             if (link.hasClass('header-offset')) {
-                offset = offset - UI.headerHeight;
+                offset = offset - UiHelpers.headerHeight;
             }
 
             if (section.length) {
@@ -55,6 +71,19 @@ let UI = {
         });
     },
 
+    /**
+     * Activates any items on the page that need stickykit setup.
+     */
+    activateStickyItems() {
+        // Loop over all sticky items and register them.
+        this.stickyItems.each(function() {
+            $(this).stick_in_parent({
+                offset_top: UiHelpers.stickyOffset,
+            });
+        });
+
+    },
+
 };
 
-export default UI;
+export default UiHelpers;

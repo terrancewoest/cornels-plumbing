@@ -1,0 +1,28 @@
+.sidebar {
+    width: 300px;
+}
+
+.sidebar-block {
+    &:not(:last-child) {
+        margin-bottom: $gutter;
+    }
+}
+
+.sidebar-block-title {
+    font-size: 20px;
+    font-weight: $fontBold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: $gutter/2;
+    margin-bottom: 0;
+    &:after {
+        content: '';
+        height: 1px;
+        background: $colorGray;
+        width: $gutter*2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

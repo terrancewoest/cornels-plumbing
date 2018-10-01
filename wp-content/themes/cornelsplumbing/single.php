@@ -10,31 +10,51 @@
 
         <div class="container">
             <h1 class="page-banner-title"><?php the_title(); ?></h1>
+            <p class="page-banner-meta mb-0">
+                <span class="item item-date"><strong>Posted:</strong> <?php echo get_the_date(); ?></span>
+                <span class="item item-social">
+
+                    <a target="_blank"
+                       href="https://www.facebook.com/sharer/sharer.php?u=<?php echo htmlentities(get_the_permalink()); ?>"
+                    ><i class="fab fa-fw fa-facebook-square"></i> Share on Facebook</a>
+
+                    <a target="_blank"
+                       href="https://twitter.com/intent/tweet?original_referer=<?php echo urlencode(get_the_permalink()); ?>&amp;text=<?php echo urlencode(get_the_title()); ?>&amp;url=<?php echo urlencode(get_the_permalink()); ?>"
+                    ><i class="fab fa-fw fa-twitter-square"></i> Tweet this Tip</a>
+                </span>
+            </p>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
-            <article class="col-sm-9 mb-4">
+            <article class="col mb-4">
                 <div class="card card-shadow card-content">
-                    <div class="card-body">
+                    <div class="card-body the-content">
                         <?php the_content(get_the_ID()); ?>
                     </div>
                 </div>
             </article>
 
-            <aside class="col-sm-3 sidebar">
-                <div class="is-sticky my-4">
-                    <ul>
-                        <li>Sed posuere consectetur est at lobortis.</li>
-                        <li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                        <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-                        <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-                        <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Get Free Quote</a>
-                </div>
+            <aside class="col-auto">
+                <?php get_sidebar(); ?>
             </aside>
+        </div>
+    </div>
+</div>
+
+<div id="quoteModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Get a free quote!</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <?php echo do_shortcode('[formidable id=7]'); ?>
+            </div>
         </div>
     </div>
 </div>

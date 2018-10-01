@@ -23,7 +23,7 @@
     }
 
     &.section-blog {
-        background: linear-gradient(to bottom, #{$colorLightAlt}, #{$colorLight});
+        background: linear-gradient(to top, #{$colorLightAlt}, #{$colorLight});
     }
 
     &.section-about {
@@ -46,14 +46,14 @@
 
     .top-anchor {
         position: absolute;
-        top: 0;
+        top: -$headerHeight;
         left: 0;
         right: 0;
     }
 
     .bottom-anchor {
         position: absolute;
-        bottom: 0;
+        bottom: $headerHeight;
         left: 0;
         right: 0;
     }

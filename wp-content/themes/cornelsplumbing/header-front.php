@@ -11,7 +11,7 @@
                 Testimonials
                 <span class="active-icon"><i class="fas fa-caret-up"></i></span>
             </a>
-            <a class="nav-link scroll-to header-offset" href="#about-us">
+            <a class="nav-link scroll-to header-offset" href="#about">
                 About Us
                 <span class="active-icon"><i class="fas fa-caret-up"></i></span>
             </a>

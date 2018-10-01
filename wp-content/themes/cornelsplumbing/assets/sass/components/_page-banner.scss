@@ -1,7 +1,7 @@
 .page-banner {
     background: $colorPrimary;
     color: $colorLight;
-    padding: $gutter*2.5 0;
+    padding: $gutter*2.5 0 $gutter;
 
     h1 {
         font-weight: $fontBold;
@@ -56,4 +56,44 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+}
+
+.page-banner-title {
+
+}
+
+.page-banner-meta {
+    position: relative;
+    padding-top: $gutter/2;
+    font-size: 18px;
+    letter-spacing: 1px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: $gutter*4;
+        background: rgba($colorLight, .8);
+    }
+
+    .item {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: $gutter;
+        }
+        strong {
+            text-transform: none;
+        }
+        a {
+            display: inline-block;
+            margin-left: $gutter/4;
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+    }
+
 }

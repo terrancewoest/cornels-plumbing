@@ -1,5 +1,8 @@
 <?php
 
+// Set the default timezone.
+date_default_timezone_set('America/Los_Angeles');
+
 /*
 |--------------------------------------------------------------------------
 | Theme Config
@@ -19,13 +22,14 @@ function cp_all_config() {
 
             'email' => 'contact@cornelsplumbing.com',
 
-            'hours' => [
-                'weekstart' => 'mon',
-                'weekend'   => 'fri',
-                'timestart' => 9,
-                'timeend'   => 17,
-                'formatted' => 'Open Mon-Fri 9am-5pm',
-            ],
+        ],
+
+        'hours' => [
+            'weekstart' => 1,
+            'weekend'   => 5,
+            'timestart' => 9,
+            'timeend'   => 17,
+            'formatted' => 'Monday - Friday | 9am - 5pm',
         ],
 
         'google' => [
@@ -33,6 +37,10 @@ function cp_all_config() {
             'place-id' => GOOGLE_PLACE_ID,
         ],
 
+        // Dates in YYYY-MM-DD format that the site should be closed for.
+        'closed' => [
+            '2018-10-01',
+        ],
     ];
 }
 

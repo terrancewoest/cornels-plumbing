@@ -1,4 +1,6 @@
-.btn {
+.btn,
+.btn:active,
+.btn:focus {
     padding-top: 0;
     padding-bottom: 0;
     padding-left: $gutter*1.5;
@@ -23,12 +25,28 @@
         color: $colorLight;
     }
 
+    &.btn-secondary {
+        background: $colorSecondary;
+        border-color: $colorSecondary;
+        color: $colorLight;
+    }
+
     &.btn-outline-primary {
         background: none;
         border-color: $colorPrimary;
         color: $colorPrimary;
         &:hover {
             background: $colorPrimary;
+            color: $colorLight;
+        }
+    }
+
+    &.btn-outline-secondary {
+        background: none;
+        border-color: $colorSecondary;
+        color: $colorSecondary;
+        &:hover {
+            background: $colorSecondary;
             color: $colorLight;
         }
     }
@@ -68,6 +86,15 @@
     &.btn-lg {
         line-height: $gutter*2 - 2px;
         font-size: 20px;
+    }
+
+    &.btn-link {
+        border-color: rgba(0,0,0,0);
+        color: inherit;
+        box-shadow: none;
+        &:hover {
+            transform: none;
+        }
     }
 }
 

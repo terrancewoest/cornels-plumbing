@@ -1,4 +1,4 @@
-.blog {
+.blog-roll {
     background: $colorLightAlt;
     padding-top: $gutter;
     padding-bottom: $gutter*2;
@@ -10,5 +10,7 @@
     > .container {
         position: relative;
         z-index: 10;
+        padding-top: $gutter;
+        padding-bottom: $gutter*2;
     }
 }

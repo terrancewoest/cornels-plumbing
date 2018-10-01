@@ -18,19 +18,27 @@ $hasImage = has_post_thumbnail($blogPage->ID);
 
     <div class="container">
         <h1 class="page-banner-title"><?php echo get_the_title($blogPage->ID); ?></h1>
+        <p>Some blurb about how taking care of your plumbing saving you money and here are some tips to follow</p>
     </div>
 </div>
 
-<div class="blog">
+<div class="blog-roll">
     <div class="container">
-    <?php
-    if (have_posts()) {
-        while (have_posts()) {
-            the_post();
+        <div class="row">
+            <div class="col-sm-8">
+            <?php
+            if (have_posts()) {
+                while (have_posts()) {
+                    the_post();
+                    get_template_part('templates/blocks/blog-excerpt');
+                }
+            }
+            ?>
+            </div>
 
-            get_template_part('templates/blocks/blog-excerpt');
-        }
-    }
-    ?>
+            <aside class="col-sm-4">
+                <?php get_sidebar(); ?>
+            </aside>
+        </div>
     </div>
 </div>

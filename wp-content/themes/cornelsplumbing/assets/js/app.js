@@ -13,10 +13,10 @@ StickyNav.init();
 import Testimonials from './components/Testimonials.js';
 Testimonials.init();
 
-// Sets up the sticky kit items and helper class.
-import StickyKitItems from './components/StickyKitItems.js';
-StickyKitItems.init();
+// // Sets up the sticky kit items and helper class.
+// import StickyKitItems from './components/StickyKitItems.js';
+// StickyKitItems.init();
 
-// General UI Items
-import UI from './components/UI.js';
-UI.init();
+// General UI Helper Items
+import UiHelpers from './components/UiHelpers.js';
+UiHelpers.init();

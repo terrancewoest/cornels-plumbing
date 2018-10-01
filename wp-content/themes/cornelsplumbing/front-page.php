@@ -25,8 +25,5 @@ get_template_part('templates/blocks/front-blog');
 // Social Section
 get_template_part('templates/blocks/front-social');
 
-// Online Quote
-get_template_part('templates/blocks/front-quote');
-
 get_footer();
 ?>
