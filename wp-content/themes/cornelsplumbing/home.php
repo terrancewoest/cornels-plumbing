@@ -21,7 +21,7 @@ $hasImage = has_post_thumbnail($blogPage->ID);
     </div>
 </div>
 
-<div class="blog-posts">
+<div class="blog">
     <div class="container">
     <?php
     if (have_posts()) {

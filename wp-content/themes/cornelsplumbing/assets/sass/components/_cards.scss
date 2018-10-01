@@ -16,6 +16,7 @@
             text-decoration: none;
         }
     }
+
     &.card-article {
         &:before {
             content: '';
@@ -39,6 +40,9 @@
         padding: $gutter/6;
     }
 
+    &.card-content {
+        margin-top: -$gutter;
+    }
 }
 
 .card-image {
@@ -65,6 +69,12 @@
 
     .card-coupon & {
         background: rgba($colorLight, .2);
+    }
+
+    .card-content & {
+        img {
+            max-width: 100% !important;
+        }
     }
 }
 

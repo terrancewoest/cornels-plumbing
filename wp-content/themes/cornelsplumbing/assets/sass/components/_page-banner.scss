@@ -3,6 +3,16 @@
     color: $colorLight;
     padding: $gutter*2.5 0;
 
+    h1 {
+        font-weight: $fontBold;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        position: relative;
+        z-index: 10;
+    }
+
     &.with-image {
         position: relative;
         overflow: hidden;
@@ -13,15 +23,12 @@
         }
     }
 
-    h1 {
-        font-weight: $fontBold;
-        letter-spacing: 2px;
+    &.alt-version {
+        background: $colorPrimary;
+        padding-bottom: $gutter*1.5;
+        color: $colorLight;
     }
 
-    .container {
-        position: relative;
-        z-index: 10;
-    }
 }
 
 .page-banner-background {

@@ -1,0 +1,14 @@
+.blog {
+    background: $colorLightAlt;
+    padding-top: $gutter;
+    padding-bottom: $gutter*2;
+}
+
+.single {
+    background: $colorLightAlt;
+
+    > .container {
+        position: relative;
+        z-index: 10;
+    }
+}
