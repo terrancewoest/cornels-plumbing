@@ -7,11 +7,29 @@
         @include shadow;
     }
 
+    &.card-article,
     &.card-action {
         transition: all .15s ease;
         &:hover {
             @include shadowHover;
             transform: translateY(-2px);
+            text-decoration: none;
+        }
+    }
+    &.card-article {
+        &:before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            height: 100%;
+            width: 2px;
+            background: $colorPrimary;
+            opacity: 0;
+            transition: all .15s ease;
+        }
+
+        &:hover:before {
+            opacity: 1;
         }
     }
 
@@ -119,6 +137,10 @@
         font-size: 27px;
         letter-spacing: 1px;
         text-transform: uppercase;
+    }
+
+    .card-article & {
+        color: $colorGrayDarkest;
     }
 }
 

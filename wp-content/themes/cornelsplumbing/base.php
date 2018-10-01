@@ -3,7 +3,7 @@
 <head>
 <?php get_template_part('templates/layout/head'); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <?php get_header(); ?>
 
     <?php cp_content_template(); ?>

@@ -1,3 +1,10 @@
+<?php
+// Get the latest post from the blog.
+$latest = new WP_Query([
+    'posts_per_page' => 3,
+    'post_type'      => 'post',
+]);
+?>
 <section id="blog" class="section section-blog" data-highlight-nav="blog">
     <div class="top-anchor"></div>
 
@@ -12,24 +19,22 @@
             </div>
 
             <div class="col-4 offset-1">
+            <?php if ($latest->have_posts()) : ?>
+
                 <nav class="nav nav-blog flex-column mb-4">
-                    <a class="nav-link" href="#">
+                <?php while($latest->have_posts()) : $latest->the_post(); ?>
+
+                    <a class="nav-link" href="<?php echo get_the_permalink(); ?>">
                         <span class="nav-icon"><i class="far fa-angle-right"></i></span>
-                        Emergency Plumbing Kit
+                        <?php echo the_title(); ?>
                     </a>
 
-                    <a class="nav-link" href="#">
-                        <span class="nav-icon"><i class="far fa-angle-right"></i></span>
-                        Freezing Pipes and How To Prevent Them
-                    </a>
-
-                    <a class="nav-link" href="#">
-                        <span class="nav-icon"><i class="far fa-angle-right"></i></span>
-                        What is Hydro-Jetting?
-                    </a>
+                <?php endwhile; ?>
                 </nav>
 
-                <a href="#" class="btn btn-primary">See All <i class="far fa-angle-right"></i></a>
+                <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="btn btn-primary">See All <i class="far fa-angle-right"></i></a>
+
+            <?php wp_reset_postdata(); endif; ?>
             </div>
         </div>
     </div>

@@ -1,0 +1,52 @@
+.page-banner {
+    background: $colorPrimary;
+    color: $colorLight;
+    padding: $gutter*2.5 0;
+
+    &.with-image {
+        position: relative;
+        overflow: hidden;
+        padding-top: $gutter*5;
+
+        h1 {
+            @include textShadow;
+        }
+    }
+
+    h1 {
+        font-weight: $fontBold;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.page-banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.4));
+    }
+
+    img {
+        min-height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
