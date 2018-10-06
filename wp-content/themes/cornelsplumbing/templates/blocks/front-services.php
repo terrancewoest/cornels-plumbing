@@ -96,7 +96,7 @@
 
         <p class="section-subtitle mb-4">Don't see what you need? these are common jobs, but definitely not the extent of what we do. Doesn't hurt to call us! <a href="tel:<?php echo cp_config('phone'); ?>"><?php echo cp_config('phone'); ?></a></p>
 
-        <a href="#" class="btn btn-lg btn-primary">Get a FREE quote online</a>
+        <a href="#quote" class="btn btn-lg btn-primary scroll-to header-offset">Get a FREE quote online</a>
     </div>
 
     <div class="bottom-anchor"></div>

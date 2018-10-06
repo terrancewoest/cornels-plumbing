@@ -15,7 +15,7 @@
                     Give us a call today and mention <br><span class="emphasis">"New Customer Pricing"</span> to get<br> 30% off your first something.
                 </h3>
 
-                <a href="#" class="btn btn-light mr-4">Start Quote</a>
+                <a href="#quote" class="btn btn-light mr-4 scroll-to header-offset">Start Quote</a>
                 <a href="tel:<?php echo cp_config('brand.phone'); ?>" class="btn btn-outline-light"><?php echo cp_config('brand.phone'); ?></a>
             </div>
         </div>
