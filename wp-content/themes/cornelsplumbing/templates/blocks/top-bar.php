@@ -22,8 +22,8 @@ if (date('G') < cp_config('hours.timestart') || date('G') > cp_config('hours.tim
 
 ?>
 <div class="topbar">
-    <div class="container d-flex flex-row text-center">
-        <p class="topbar-hours flex-fill">
+    <div class="container d-flex flex-row justify-content-between">
+        <p class="topbar-hours">
             <?php echo cp_config('hours.formatted'); ?>
             <?php if ($open) : ?>
                 <span class="ml-2 badge badge-success">NOW OPEN</span>
@@ -31,12 +31,12 @@ if (date('G') < cp_config('hours.timestart') || date('G') > cp_config('hours.tim
                 <span class="ml-2 badge badge-danger">CLOSED</span>
             <?php endif ?>
         </p>
-        <p class="topbar-phone flex-fill">(503) 123-1234</p>
-        <p class="topbar-email flex-fill">contact@cornelsplumbing.com</p>
-        <p class="topbar-social flex-fill">
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-twitter-square"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <p class="topbar-phone"><?php echo cp_config('brand.phone'); ?></p>
+        <p class="topbar-email"><?php echo cp_config('brand.email'); ?></p>
+        <p class="topbar-social">
+            <a href="<?php echo cp_config('brand.facebook'); ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="<?php echo cp_config('brand.twitter'); ?>" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="<?php echo cp_config('brand.instagram'); ?>" target="_blank"><i class="fab fa-instagram"></i></a>
         </p>
     </div>
 </div>

@@ -35,8 +35,8 @@
 
     <div class="sidebar-block social-proof-icons">
         <div class="d-flex justify-content-center align-items-center mb-2">
-            <a href="#"><img src="<?php cp_asset('images/googlereview.png'); ?>"></a>
             <a href="#" class="mr-2"><img src="<?php cp_asset('images/yelpreview.png'); ?>"></a>
+            <a href="#"><img src="<?php cp_asset('images/googlereview.png'); ?>"></a>
         </div>
 
         <div class="d-flex justify-content-center align-items-center">

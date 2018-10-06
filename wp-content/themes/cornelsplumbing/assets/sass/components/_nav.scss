@@ -48,6 +48,13 @@
             color: $colorPrimary;
         }
 
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+
         .active-icon {
             transition: opacity .15s ease;
             opacity: 0;

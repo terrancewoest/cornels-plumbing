@@ -7,12 +7,17 @@
                 <img src="<?php cp_asset('images/cp-logo-252x150.png'); ?>">
             </a>
 
-            <a class="nav-link scroll-to" href="#services" data-highlight-on="services">
+            <a class="nav-link" href="/">
+                Home
+                <span class="active-icon"><i class="fas fa-caret-up"></i></span>
+            </a>
+
+            <a class="nav-link" href="#">
                 Services
                 <span class="active-icon"><i class="fas fa-caret-up"></i></span>
             </a>
 
-            <a class="nav-link scroll-to header-offset" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">
+            <a class="nav-link" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">
                 Cornel's Tips &amp; Tricks
                 <span class="active-icon"><i class="fas fa-caret-up"></i></span>
             </a>

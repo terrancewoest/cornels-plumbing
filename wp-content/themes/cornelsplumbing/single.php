@@ -1,4 +1,9 @@
-<?php the_post(); ?>
+<?php
+the_post();
+
+$next_post = get_next_post();
+$last_post = get_previous_post();
+?>
 <div class="single">
     <div class="page-banner alt-version<?php echo has_post_thumbnail() ? ' with-image' : ''; ?>">
         <?php if (has_post_thumbnail()) { ?>
@@ -28,33 +33,43 @@
 
     <div class="container">
         <div class="row">
-            <article class="col mb-4">
-                <div class="card card-shadow card-content">
+            <article class="col">
+                <div class="card card-shadow card-content mb-4">
                     <div class="card-body the-content">
                         <?php the_content(get_the_ID()); ?>
                     </div>
+                </div>
+
+                <div class="row">
+                    <?php if ($last_post) : ?>
+                    <div class="col-sm-6">
+                        <a href="<?php echo get_the_permalink($last_post); ?>" class="card card-clickable card-article card-shadow">
+                            <div class="card-body">
+                                <p class="card-text text-uppercase mb-2"><strong><i class="far fa-angle-left mr-3"></i> Last Post</strong></p>
+                                <h4 class="card-title mb-0"><?php echo $last_post->post_title; ?></h4>
+                            </div>
+                        </a>
+                    </div>
+                    <?php else : ?>
+                    <div class="col-sm-6"></div>
+                    <?php endif; ?>
+
+                    <?php if ($next_post) : ?>
+                    <div class="col-sm-6">
+                        <a href="<?php echo get_the_permalink($next_post); ?>" class="card card-clickable card-article card-shadow">
+                            <div class="card-body text-right">
+                                <p class="card-text text-uppercase mb-2"><strong>Next Post <i class="far fa-angle-right ml-3"></i></strong></p>
+                                <h4 class="card-title mb-0"><?php echo $next_post->post_title; ?></h4>
+                            </div>
+                        </a>
+                    </div>
+                    <?php endif; ?>
                 </div>
             </article>
 
             <aside class="col-auto">
                 <?php get_sidebar(); ?>
             </aside>
-        </div>
-    </div>
-</div>
-
-<div id="quoteModal" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Get a free quote!</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <?php echo do_shortcode('[formidable id=7]'); ?>
-            </div>
         </div>
     </div>
 </div>

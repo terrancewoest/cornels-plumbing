@@ -19,9 +19,13 @@ function cp_all_config() {
     return [
         'brand' => [
             'phone' => '(503) 123-1234',
-
             'email' => 'contact@cornelsplumbing.com',
-
+            'facebook' => 'https://www.facebook.com/cornelsplumbing/',
+            'twitter' => 'https://twitter.com/cornelsplumbing/',
+            'instagram' => 'https://www.instagram.com/cornelsplumbing/',
+            'yelp' => 'https://www.yelp.com/biz/cornels-plumbing-beaverton',
+            'google' => 'https://www.google.com/search?q=CORNEL%27S+PLUMBING,+5235+SW+153rd+Ave,+Beaverton,+OR+97007#lrd=0x54950e8750dcfcc7:0x9bfbbb069d87c1cd,1,,,',
+            'angies' => 'https://www.angieslist.com/companylist/us/or/beaverton/cornel%27s-plumbing-reviews-9148391.htm',
         ],
 
         'hours' => [
@@ -33,13 +37,13 @@ function cp_all_config() {
         ],
 
         'google' => [
-            'api-key' => GOOGLE_API_KEY,
-            'place-id' => GOOGLE_PLACE_ID,
+            'api-key' => 'AIzaSyDKFG64SDlspADc0yT9ve8ALqDDPxVeMjg',
+            'place-id' => 'ChIJx_zcUIcOlVQRzcGHnQa7-5s',
         ],
 
         // Dates in YYYY-MM-DD format that the site should be closed for.
         'closed' => [
-            '2018-10-01',
+            // '2018-10-01',
         ],
     ];
 }

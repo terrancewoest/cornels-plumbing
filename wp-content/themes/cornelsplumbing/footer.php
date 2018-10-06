@@ -33,7 +33,7 @@
                     <nav class="nav flex-column">
                         <a class="nav-link" href="#"><?php echo cp_config('brand.phone'); ?></a>
                         <a class="nav-link" href="#"><?php echo cp_config('brand.email'); ?></a>
-                        <a class="nav-link" href="#"><?php echo cp_config('brand.hours.formatted'); ?></a>
+                        <a class="nav-link" href="#"><?php echo cp_config('hours.formatted'); ?></a>
                     </nav>
 
                     <h4>Connect With Us</h4>

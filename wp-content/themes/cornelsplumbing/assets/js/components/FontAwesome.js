@@ -42,6 +42,7 @@ import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
     faClock as farClock,
     faAngleRight as farAngleRight,
+    faAngleLeft as farAngleLeft,
 } from '@fortawesome/pro-regular-svg-icons';
 
 // Import Solid Icons
@@ -69,6 +70,7 @@ library.add(
     // Regular Icons
     farClock,
     farAngleRight,
+    farAngleLeft,
 
     // Solid Icons
     fasUsers,

@@ -25,13 +25,13 @@
     <div class="hero-card">
         <div class="row text-center">
             <div class="col">
-                <a href="#"><img src="<?php cp_asset('images/googlereview.png'); ?>"></a>
+                <a target="_blank" href="<?php echo cp_config('brand.google'); ?>"><img src="<?php cp_asset('images/googlereview.png'); ?>"></a>
             </div>
             <div class="col">
-                <a href="#"><img src="<?php cp_asset('images/yelpreview.png'); ?>"></a>
+                <a target="_blank" href="<?php echo cp_config('brand.yelp'); ?>"><img src="<?php cp_asset('images/yelpreview.png'); ?>"></a>
             </div>
             <div class="col">
-                <a href="#"><img src="<?php cp_asset('images/angieslistreview.png'); ?>"></a>
+                <a target="_blank" href="<?php echo cp_config('brand.angies'); ?>"><img src="<?php cp_asset('images/angieslistreview.png'); ?>"></a>
             </div>
         </div>
     </div>
