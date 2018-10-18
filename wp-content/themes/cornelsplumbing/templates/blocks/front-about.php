@@ -25,11 +25,11 @@
         </div>
 
         <div class="row align-items-center mb-5 pb-5">
-            <div class="col d-flex justify-content-center">
-                <img src="<?php cp_asset('/images/cornel-old-picture.jpg'); ?>">
+            <div class="col-sm-6 d-flex justify-content-center">
+                <img style="max-width: 100%;" src="<?php cp_asset('/images/cornel-old-picture.jpg'); ?>">
             </div>
 
-            <div class="col">
+            <div class="col-sm-6">
 
                 <div class="card card-shadow">
                     <div class="card-body">
@@ -48,9 +48,11 @@
             <h2 class="section-tag">Social Media</h2>
             <h3 class="section-title">
                 Connect with us!
-                <a href="<?php echo cp_config('brand.facebook'); ?>"><i class="fab fa-fw fa-facebook-square"></i></a>
-                <a href="<?php echo cp_config('brand.twitter'); ?>"><i class="fab fa-fw fa-twitter-square"></i></a>
-                <a href="<?php echo cp_config('brand.instagram'); ?>"><i class="fab fa-fw fa-instagram"></i></a>
+                <span class="social">
+                    <a href="<?php echo cp_config('brand.facebook'); ?>"><i class="fab fa-fw fa-facebook-square"></i></a>
+                    <a href="<?php echo cp_config('brand.twitter'); ?>"><i class="fab fa-fw fa-twitter-square"></i></a>
+                    <a href="<?php echo cp_config('brand.instagram'); ?>"><i class="fab fa-fw fa-instagram"></i></a>
+                </span>
             </h3>
             <p class="section-text">Check out some of the work we've done on Instagram. If you like what you see let us know with a like on our social profiles.</p>
 

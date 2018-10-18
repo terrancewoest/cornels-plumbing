@@ -6,7 +6,7 @@
 | These are all the general UI javascript helpers
 */
 
-import 'sticky-kit/dist/sticky-kit.js';
+import 'sticky-kit/dist/sticky-kit.min.js';
 
 let UiHelpers = {
 
@@ -39,7 +39,7 @@ let UiHelpers = {
         }
 
         // Only run this file if the sticky class is in the dom.
-        this.stickyItems = $(this.selectors.stickyItem)
+        this.stickyItems = $(this.selectors.stickyItem);
         if (this.stickyItems.length) {
             this.activateStickyItems();
         }
@@ -77,7 +77,15 @@ let UiHelpers = {
     activateStickyItems() {
         // Loop over all sticky items and register them.
         this.stickyItems.each(function() {
-            $(this).stick_in_parent({
+            let item = $(this);
+            if (item.hasClass('header-offset')) {
+                item.stick_in_parent({
+                    offset_top: (UiHelpers.stickyOffset + 100),
+                });
+                return;
+            }
+
+            item.stick_in_parent({
                 offset_top: UiHelpers.stickyOffset,
             });
         });

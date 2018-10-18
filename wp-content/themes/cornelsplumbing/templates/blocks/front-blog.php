@@ -10,7 +10,7 @@ $latest = new WP_Query([
 
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-5 offset-1">
+            <div class="col-sm-5 offset-sm-1">
                 <h2 class="section-tag">Cornel's Tips & Tricks</h2>
 
                 <h3 class="section-title mb-4">Plumbing can get expensive. But it doesn't have to cost an arm and a leg!</h3>
@@ -18,7 +18,7 @@ $latest = new WP_Query([
                 <p class="section-text">The most expensive plumbing problems can usually be prevented or mitigated through proper care and maintenance. Here are the latest of Cornel’s latest tips and tricks that you can do at home to keep your home’s plumbing flowing.</p>
             </div>
 
-            <div class="col-4 offset-1">
+            <div class="col-sm-4 offset-sm-1">
             <?php if ($latest->have_posts()) : ?>
 
                 <nav class="nav nav-blog flex-column mb-4">

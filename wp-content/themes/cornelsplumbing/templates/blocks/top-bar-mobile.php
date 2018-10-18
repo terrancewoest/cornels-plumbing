@@ -2,8 +2,8 @@
 $afterHours = cp_is_after_hours();
 $phonesClosed = cp_phones_closed();
 ?>
-<div class="topbar">
-    <div class="container d-flex flex-row justify-content-between">
+<div class="topbar topbar-mobile">
+    <div class="container text-center">
         <p class="topbar-hours">
             <?php echo cp_config('hours.formatted'); ?>
 
@@ -17,10 +17,5 @@ $phonesClosed = cp_phones_closed();
         </p>
         <p class="topbar-phone"><?php echo cp_config('brand.phone'); ?></p>
         <p class="topbar-email"><?php echo cp_config('brand.email'); ?></p>
-        <p class="topbar-social">
-            <a href="<?php echo cp_config('brand.facebook'); ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="<?php echo cp_config('brand.twitter'); ?>" target="_blank"><i class="fab fa-twitter-square"></i></a>
-            <a href="<?php echo cp_config('brand.instagram'); ?>" target="_blank"><i class="fab fa-instagram"></i></a>
-        </p>
     </div>
 </div>

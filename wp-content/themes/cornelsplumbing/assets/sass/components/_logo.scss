@@ -2,11 +2,15 @@
     display: block;
 
     &.logo-hero {
-        width: 380px;
+        width: 200px;
         height: auto;
         max-height: 100%;
         max-width: 100%;
-        margin-right: $gutter*2;
+        margin: $gutter auto;
+        @include tablet {
+            margin-right: $gutter*2;
+            width: 380px;
+        }
     }
 
     &.logo-nav {

@@ -12,6 +12,7 @@ $includes = [
     'redirect.php',         // Handles any template rewrite or redirecting.
     'assets.php',           // Enqueues all needed theme assets.
     'thumbnails.php',       // Register all of the needed thumbnail sizes.
+    'ajax.php',              // Anything api related.
     'helpers.php',          // Miscellaneous theme helper functions
 ];
 

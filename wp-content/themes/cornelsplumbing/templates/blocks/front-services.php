@@ -6,97 +6,61 @@
 
         <h3 class="section-title mb-3">Have a plumbing issue? We've got you covered.</h3>
 
-        <p class="section-text mb-5">Blurb about how long we’ve been in business, we’ll do pretty much anything residential, if you don’t see what you need listed here give us a call.</p>
+        <p class="section-text mb-5">These are common services that we specialize in, but definitely not the extent of what we do. Don't see what you need? Doesn't hurt to call us! <a href="tel:<?php echo cp_config('brand.phone'); ?>"><?php echo cp_config('brand.phone'); ?></a></p>
 
         <div class="section-block">
-            <div class="row mb-4">
-                <div class="col">
-                    <a href="#" class="feature feature-hover">
+            <div class="row">
+                <div class="col-sm-4 mb-4">
+                    <a href="/drain-cleaning" class="feature feature-hover">
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        <h4>Drain Cleaning</h4>
                     </a>
                 </div>
 
-                <div class="col">
-                    <a href="#" class="feature feature-hover">
+                <div class="col-sm-4 mb-4">
+                    <a href="/plumbing" class="feature feature-hover">
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        <h4>Plumbing</h4>
                     </a>
                 </div>
 
-                <div class="col mb-4">
-                    <a href="#" class="feature feature-hover">
+                <div class="col-sm-4 mb-4">
+                    <a href="/sewer-repair" class="feature feature-hover">
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    </a>
-                </div>
-
-                <div class="col">
-                    <a href="#" class="feature feature-hover">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        <h4>Sewer Repair</h4>
                     </a>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <a href="#" class="feature feature-hover">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 mb-4">
+                    <a href="/water-services" class="feature feature-hover">
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        <h4>Water Services</h4>
                     </a>
                 </div>
 
-                <div class="col">
-                    <a href="#" class="feature feature-hover">
+                <div class="col-sm-4 mb-4">
+                    <a href="/water-heaters" class="feature feature-hover">
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        <h4>Water Heaters</h4>
                     </a>
                 </div>
 
-                <div class="col">
-                    <a href="#" class="feature feature-hover">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    </a>
-                </div>
-
-                <div class="col">
-                    <a href="#" class="feature feature-hover">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Name of service</h4>
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    </a>
-                </div>
             </div>
         </div>
 
-        <p class="section-subtitle mb-4">Don't see what you need? these are common jobs, but definitely not the extent of what we do. Doesn't hurt to call us! <a href="tel:<?php echo cp_config('phone'); ?>"><?php echo cp_config('phone'); ?></a></p>
-
-        <a href="#quote" class="btn btn-lg btn-primary scroll-to header-offset">Get a FREE quote online</a>
+        <a href="#quote" class="btn btn-lg btn-primary scroll-to header-offset">Schedule Quote Online</a>
     </div>
 
     <div class="bottom-anchor"></div>

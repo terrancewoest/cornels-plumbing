@@ -11,12 +11,9 @@ let Testimonials = {
      */
     init() {
 
-        // Skipping this until I get google business setup.
-        return;
-
-        // Only run this file if the testimonails block is on the page.
+        // Only run this file if the testimonials block is on the page.
         this.testimonailsWrapper = $('[data-testimonials]');
-        if (!this.testimonailsWrapper.length) {
+        if (!this.testimonailsWrapper.length || !this.testimonailsWrapper.data('build')) {
             return;
         }
 
@@ -24,21 +21,74 @@ let Testimonials = {
         this.placeId = $('meta[name=place-id]').attr('content');
         this.addReviewUrl = this.addReviewUrl.replace('{placeId}', this.placeId);
 
-        // Get the places service.
-        let map = new google.maps.Map(document.getElementById('map-hook'));
-        let placeService = new google.maps.places.PlacesService(map);
+        // Construct the review.
+        this.getTestimonials()
+            .then(testimonials => {
+                // Create the needed html.
+                let html = this.createReviewsHtml(testimonials);
 
-        // Get the reviews and set them up in the dom.
-        placeService.getDetails({
-            placeId: this.placeId,
-            fields: ['reviews', 'url'],
-        }, (place, status) => {
+                // Insert it into the testimonials dom element.
+                this.testimonailsWrapper.html(html);
+            });
+    },
 
-            // Create the needed html.
-            let html = this.createReviewsHtml(place.reviews);
+    /**
+     * Gets the testimonials.
+     */
+    getTestimonials() {
+        return new Promise((resolve, reject) => {
 
-            // Insert it into the testimonials dom element.
-            this.testimonailsWrapper.html(html);
+            // Otherwise get from the api and cache.
+            let apiTestimonials = this.getTestimonialsFromGoogle(resolve)
+                .then( testimonials => {
+                    this.cacheTestimonials(testimonials);
+                    resolve(testimonials);
+                });
+        });
+    },
+
+    /**
+     * Gets the testimonials from the google api.
+     */
+    getTestimonialsFromGoogle() {
+
+        // Return a promise.
+        return new Promise((resolve, reject) => {
+            // Get the places service.
+            let map = new google.maps.Map(document.getElementById('map-hook'));
+            let placeService = new google.maps.places.PlacesService(map);
+
+            // Get the reviews and set them up in the dom.
+            placeService.getDetails({
+                placeId: this.placeId,
+                fields: ['reviews', 'url'],
+            }, (place, status) => {
+
+                // Adapt it to only the data we need.
+                let reviewData = [];
+                $.each(place.reviews, (index, review) => {
+                    reviewData.push({
+                        profile_photo_url: review.profile_photo_url,
+                        author_name: review.author_name,
+                        rating: review.rating,
+                        relative_time_description: review.relative_time_description,
+                        text: review.text,
+                    });
+                });
+
+                resolve(reviewData);
+            });
+
+        });
+    },
+
+    /**
+     * Sends the testimonial data to the server to be cached.
+     */
+    cacheTestimonials(testimonials) {
+        $.post(CP_Global.ajaxUrl, {
+            action: 'cache_testimonials',
+            testimonials: testimonials,
         });
     },
 
@@ -62,7 +112,7 @@ let Testimonials = {
 
             // Open a row if needed.
             if (count === 1 || count === 4) {
-                reviewHtml = '<div class="row mb-4">' + reviewHtml;
+                reviewHtml = '<div class="row">' + reviewHtml;
             }
 
             // Close a row if needed.
@@ -76,7 +126,7 @@ let Testimonials = {
 
         // We fill up the last spot with an add review card.
         let addReviewCard = [
-            '<div class="col">',
+            '<div class="col mb-4">',
                 '<div class="card card-shadow card-action color-secondary">',
                     '<a href="' + this.addReviewUrl + '" target="_blank" class="card-body">',
                         '<div class="card-icon"><i class="fas fa-plus"></i></div>',

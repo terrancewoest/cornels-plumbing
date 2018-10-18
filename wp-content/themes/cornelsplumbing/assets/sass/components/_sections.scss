@@ -32,7 +32,11 @@
         padding-bottom: $gutter;
 
         .row {
-            padding-top: $gutter*3;
+            margin-bottom: $gutter*3;
+            @include tablet {
+                padding-top: $gutter*3;
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -85,6 +89,10 @@
 
     .section-coupon & {
         color: rgba($colorLight, .7);
+        text-align: center;
+        @include tablet {
+            text-align: left;
+        }
 
         a {
             color: inherit;
@@ -102,6 +110,15 @@
 
     .section-preventative & {
         font-size: 24px;
+    }
+
+    .section-about & {
+        .social {
+            display: block;
+            @include tablet {
+                display: inline-block;
+            }
+        }
     }
 }
 
@@ -149,8 +166,36 @@
     }
 
     .section-about & {
-        top: $gutter;
-        left: $gutter;
-        right: $gutter;
+        position: relative;
+        padding-top: $gutter*3;
+        margin-right: $gutter/2;
+        margin-left: $gutter/2;
+        @include tablet {
+            position: absolute;
+            padding-top: 0;
+            margin-right: 0;
+            margin-left: 0;
+            top: $gutter;
+            left: $gutter;
+            right: $gutter;
+        }
+    }
+}
+
+.section-actions {
+
+    .section-coupon & {
+        text-align: center;
+        @include tablet {
+            text-align: left;
+        }
+
+        .quote {
+            margin-bottom: $gutter/2;
+            @include tablet {
+                margin-bottom: 0;
+                margin-right: $gutter/2;
+            }
+        }
     }
 }

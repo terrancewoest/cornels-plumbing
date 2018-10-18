@@ -35,10 +35,16 @@ function cp_enqueue_assets() {
         wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=' . cp_config('google.api-key') . '&libraries=places');
     }
 
+
     // Theme's Javascript
-    wp_enqueue_script('cp-js', get_template_directory_uri() . '/dist/app.js', ['jquery', 'bootstrap'], null, true);
+    wp_enqueue_script('cp-js', get_template_directory_uri() . '/dist/app.js?v=6', ['jquery', 'bootstrap'], null, true);
+
+    // Localize the main js file with the CP_Global variable.
+    wp_localize_script('cp-js', 'CP_Global', [
+        'ajaxUrl' => admin_url('admin-ajax.php'),
+    ]);
 
     // Theme's CSS
-    wp_enqueue_style('cp-css', get_template_directory_uri() . '/dist/app.css', ['bootstrap-css']);
+    wp_enqueue_style('cp-css', get_template_directory_uri() . '/dist/app.css?v=6', ['bootstrap-css']);
 
 }

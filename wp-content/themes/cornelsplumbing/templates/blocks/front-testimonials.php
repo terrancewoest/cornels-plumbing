@@ -1,3 +1,9 @@
+<?php
+// Unncomment this as a quick way to clear the cache.
+// apc_delete('cp_testimonials');
+
+$testimonials = apc_fetch('cp_testimonials');
+?>
 <section id="testimonials" class="section section-testimonials" data-highlight-nav="testimonials">
     <div class="top-anchor"></div>
 
@@ -9,17 +15,54 @@
         </div>
 
         <div class="section-block">
-            <div class="testimonials" data-testimonials>
-                Testimonials go here.
-            </div>
+            <div class="testimonials" data-testimonials data-build="<?php echo apc_fetch('cp_testimonials') ? 'false' : 'true'; ?>"></div>
+            <?php if ($testimonials) : $row = 0; ?>
+            <?php foreach(array_chunk($testimonials, 3) as $testimonialRow) :
+                $row++;
+                ?>
+                <div class="row">
+                <?php foreach($testimonialRow as $testimonial) : ?>
+
+                    <div class="col mb-4">
+                        <div class="card card-shadow card-testimonial">
+                            <div class="card-body">
+                                <div class="row no-gutters mb-3">
+                                    <div class="col-auto pr-3">
+                                        <img class="rounded-circle card-image" src="<?php echo $testimonial['profile_photo_url']; ?>">
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="card-title mb-1"><?php echo $testimonial['author_name']; ?></h5>
+                                        <span class="stars stars-<?php echo $testimonial['rating']; ?>"><span class="rating"></span></span>
+                                    </div>
+                                </div>
+                                <p class="card-subtitle mb-1 text-muted">Posted <?php echo $testimonial['relative_time_description']; ?></p>
+                                <p class="card-text"><?php echo $testimonial['text']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php endforeach; ?>
+                <?php if ($row == 2) : ?>
+                    <div class="col">
+                        <div class="card card-shadow card-action color-secondary">
+                            <a href="https://search.google.com/local/writereview?placeid=<?php echo cp_config('google.place-id'); ?>" target="_blank" class="card-body">
+                                <div class="card-icon"><i class="fas fa-plus"></i></div>
+                                <h4 class="card-title">Add your review</h4>
+                                <p class="card-text">At the end of the day, it's happy customers that keep us in business. Tell us how we did!</p>
+                            </a>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                </div>
+            <?php endforeach; endif; ?>
             <span class="d-none" id="map-hook">
         </div>
 
         <div class="section-block text-center">
             <h4 class="section-heading mb-5">Why do our customers love us?</h4>
 
-            <div class="row mb-5">
-                <div class="col">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
@@ -27,7 +70,7 @@
                         <p>Always on-time and prepared</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
@@ -35,7 +78,7 @@
                         <p>Always on-time and prepared</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
@@ -43,7 +86,7 @@
                         <p>Always on-time and prepared</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>
@@ -51,7 +94,7 @@
                         <p>Always on-time and prepared</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
                             <i class="far fa-clock"></i>

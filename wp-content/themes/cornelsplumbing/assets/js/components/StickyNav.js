@@ -14,7 +14,7 @@ let StickyNav = {
     // All needed dom selectors.
     selectors: {
         anchor: '.sticky-anchor',
-        stickyNav: '.nav-sticky',
+        stickyNav: '.header-sticky',
         highlightSections: '[data-highlight-nav]',
         topAnchor: '.top-anchor',
         bottomAnchor: '.bottom-anchor',

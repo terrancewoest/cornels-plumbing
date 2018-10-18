@@ -1,9 +1,28 @@
 .topbar {
     color: rgba($colorLight, .8);
     background: $colorPrimary;
-    height: $gutter;
     line-height: $gutter;
     font-weight: $fontBold;
+
+    &:not(.topbar-mobile) {
+        height: $gutter;
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
+
+    &.topbar-mobile {
+        font-size: 18px;
+        padding-bottom: $gutter;
+        p {
+            padding: 5px 0;
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba($colorLight, .2);
+            }
+        }
+    }
+
 
     p {
         margin: 0;
@@ -29,5 +48,11 @@
 
     a:not(:last-child) {
         margin-right: $gutter/3;
+    }
+}
+
+.topbar-hours {
+    @include smallMobile {
+        display: none;
     }
 }

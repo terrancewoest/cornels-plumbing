@@ -7,7 +7,7 @@
 | sticky-kit.js' .stick_in_parent() method.
 */
 
-import 'sticky-kit/dist/sticky-kit.js';
+import 'sticky-kit/dist/sticky-kit.min.js';
 
 let StickyKitItems = {
 
@@ -38,7 +38,13 @@ let StickyKitItems = {
      * Registers a jquery object with stickykit.
      */
     registerStickyItem(item) {
-        item.stick_in_parent();
+        if (item.hasClass('header-offset')) {
+            item.stick_in_parent({
+                offset: 100,
+            });
+        } else {
+            item.stick_in_parent();
+        }
     },
 
 };

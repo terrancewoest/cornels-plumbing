@@ -4,6 +4,8 @@ the_post();
 $next_post = get_next_post();
 $last_post = get_previous_post();
 ?>
+<div class="sticky-anchor"></div>
+
 <div class="single">
     <div class="page-banner alt-version<?php echo has_post_thumbnail() ? ' with-image' : ''; ?>">
         <?php if (has_post_thumbnail()) { ?>
@@ -33,7 +35,7 @@ $last_post = get_previous_post();
 
     <div class="container">
         <div class="row">
-            <article class="col">
+            <article class="col mb-4">
                 <div class="card card-shadow card-content mb-4">
                     <div class="card-body the-content">
                         <?php the_content(get_the_ID()); ?>
@@ -42,7 +44,7 @@ $last_post = get_previous_post();
 
                 <div class="row">
                     <?php if ($last_post) : ?>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 mb-3">
                         <a href="<?php echo get_the_permalink($last_post); ?>" class="card card-clickable card-article card-shadow">
                             <div class="card-body">
                                 <p class="card-text text-uppercase mb-2"><strong><i class="far fa-angle-left mr-3"></i> Last Post</strong></p>
@@ -55,7 +57,7 @@ $last_post = get_previous_post();
                     <?php endif; ?>
 
                     <?php if ($next_post) : ?>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 mb-3">
                         <a href="<?php echo get_the_permalink($next_post); ?>" class="card card-clickable card-article card-shadow">
                             <div class="card-body text-right">
                                 <p class="card-text text-uppercase mb-2"><strong>Next Post <i class="far fa-angle-right ml-3"></i></strong></p>
@@ -67,7 +69,7 @@ $last_post = get_previous_post();
                 </div>
             </article>
 
-            <aside class="col-auto">
+            <aside class="col-sm-auto">
                 <?php get_sidebar(); ?>
             </aside>
         </div>

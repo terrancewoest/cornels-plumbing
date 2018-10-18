@@ -1,8 +1,13 @@
 .hero {
     margin-top: -$headerHeight;
-    height: $heroHeight;
     position: relative;
     z-index: 1;
+    padding-top: $gutter*2;
+
+    @include tablet {
+        padding: 0;
+        height: $heroHeight;
+    }
 }
 
 .hero-background {
@@ -26,44 +31,61 @@
 }
 
 .hero-content {
-    height: $heroHeight;
+    @include tablet {
+        height: $heroHeight;
+    }
 
     .container {
-        padding-top: $headerHeight;
-        padding-bottom: $headerHeight;
+        padding-bottom: $gutter*5;
+        @include tablet {
+            padding-top: $headerHeight;
+            padding-bottom: $headerHeight;
+        }
     }
 
     h1 {
+        text-align: center;
         color: $colorDark;
-        font-size: 36px;
+        font-size: 18px;
         font-weight: $fontBold;
         line-height: 1.4em;
         margin-bottom: $gutter;
+        @include tablet {
+            font-size: 36px;
+        }
 
         .highlight {
             display: block;
-            font-size: 42px;
+            font-size: 22px;
             color: $colorPrimary;
+            @include tablet {
+                font-size: 42px;
+            }
         }
     }
 }
 
 .hero-card {
     padding: $gutter/3;
+    background: $colorLight;
+    border-radius: 3px;
+    z-index: 10;
     width: 800px;
     max-width: calc(100% - #{$gutter});
-    background: $colorLight;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
     transform: translateY(50%);
-    border-radius: 3px;
     @include shadow;
 
+
     img {
-        height: 110px;
+        height: 75px;
         width: auto;
+        @include tablet {
+            height: 110px;
+        }
     }
 }

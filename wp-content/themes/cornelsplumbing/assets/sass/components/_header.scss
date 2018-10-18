@@ -2,13 +2,82 @@
     height: $headerHeight;
     position: relative;
     background: $colorLight;
+    z-index: 20;
 
     &.header-front {
         background: linear-gradient(to bottom, rgba($colorLight, 1), rgba($colorLight,0));
-        z-index: 20;
     }
 
     &.header-main {
         @include shadow;
     }
+
+}
+
+.mobile-menu {
+    height: 100%;
+    @include tablet {
+        display: none;
+    }
+
+    .static-section {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .header-front & {
+            padding-top: $gutter;
+        }
+    }
+
+    .header-sticky {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: $colorLight;
+        border-top: 4px solid $colorPrimary;
+        @include shadow;
+
+        &.stuck {
+            display: block;
+        }
+    }
+
+    .mobile-overlay {
+        position: fixed;
+        z-index: 20;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $colorLight;
+        transition: opacity .15s ease, height 0s .15s;
+        &.active {
+            transition: opacity .15s ease, height 0s;
+            height: 100vh;
+            opacity: 1;
+        }
+    }
+
+    .mobile-overlay-header {
+        padding: $gutter/2;
+    }
+
+    .mobile-social {
+        padding-top: $gutter;
+        @include smallMobile {
+            padding-top: 0;
+        }
+
+        a {
+            font-size: 26px;
+            color: $colorGrayDarker;
+        }
+    }
+
 }

@@ -3,8 +3,8 @@
 .btn:focus {
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: $gutter*1.5;
-    padding-right: $gutter*1.5;
+    padding-left: $gutter;
+    padding-right: $gutter;
     border: 2px solid;
     border-radius: 3px;
     transition: all .15s ease;
@@ -13,6 +13,11 @@
     font-size: 18px;
     letter-spacing: 1px;
     @include shadow;
+    @include tablet {
+        padding-left: $gutter*1.5;
+        padding-right: $gutter*1.5;
+    }
+
 
     &:hover {
         transform: translateY(-2px);
@@ -70,9 +75,8 @@
     }
 
     &.btn-hero {
-        font-size: 22px;
+        font-size: 16px;
         padding: 0;
-        width: 480px;
         display: block;
         margin-right: auto;
         height: 50px;
@@ -80,6 +84,10 @@
         font-weight: $fontBold;
         &:not(:last-child) {
             margin-bottom: $gutter/2;
+        }
+        @include tablet {
+            font-size: 22px;
+            width: 480px;
         }
     }
 

@@ -6,17 +6,17 @@
     <div class="hero-content d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-auto">
+                <div class="col-sm-auto">
                     <img class="logo logo-hero" src="<?php cp_asset('images/cp-logo-760x439.png'); ?>">
                 </div>
-                <div class="col-auto">
+                <div class="col-sm-auto">
                     <h1>
                         The Portland Metro Area's favorite
                         <span class="highlight">Licensed, Local, and Family Run</span>
                         plumbers for the last 35+ years.
                     </h1>
-                    <a class="btn btn-highlight btn-hero scroll-to header-offset" href="#quote">Schedule a FREE Quote Online</a>
-                    <a class="btn btn-outline-dark btn-hero" href="tel:<?php echo cp_config('brand.phone'); ?>">... or just call us <?php echo cp_config('brand.phone'); ?></a>
+                    <a class="btn btn-highlight btn-hero scroll-to header-offset" href="#quote">Schedule a Quote Online</a>
+                    <a class="btn btn-outline-dark btn-hero" href="tel:<?php echo cp_config('brand.phone'); ?>">Or just call us: <?php echo cp_config('brand.phone'); ?></a>
                 </div>
             </div>
         </div>

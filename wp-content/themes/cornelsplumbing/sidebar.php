@@ -1,4 +1,4 @@
-<div class="sidebar is-sticky">
+<div class="sidebar is-sticky header-offset">
 <?php if (is_singular('post')) :
     // Get the latest post from the blog.
     $latest = new WP_Query([

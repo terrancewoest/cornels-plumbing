@@ -8,6 +8,8 @@ $blogPage = get_post(get_queried_object_id());
 
 $hasImage = has_post_thumbnail($blogPage->ID);
 ?>
+<div class="sticky-anchor"></div>
+
 <div class="page-banner<?php echo $hasImage ? ' with-image' : ''; ?>">
     <?php if ($hasImage) { ?>
     <div class="page-banner-background">
@@ -21,11 +23,10 @@ $hasImage = has_post_thumbnail($blogPage->ID);
         <p>Some blurb about how taking care of your plumbing saving you money and here are some tips to follow</p>
     </div>
 </div>
-
 <div class="blog-roll">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col">
             <?php
             if (have_posts()) {
                 while (have_posts()) {
@@ -36,7 +37,7 @@ $hasImage = has_post_thumbnail($blogPage->ID);
             ?>
             </div>
 
-            <aside class="col-sm-4">
+            <aside class="col-sm-auto">
                 <?php get_sidebar(); ?>
             </aside>
         </div>
