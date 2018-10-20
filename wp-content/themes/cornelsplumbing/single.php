@@ -69,7 +69,7 @@ $last_post = get_previous_post();
                 </div>
             </article>
 
-            <aside class="col-sm-auto">
+            <aside class="col-lg-auto">
                 <?php get_sidebar(); ?>
             </aside>
         </div>

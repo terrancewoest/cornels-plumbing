@@ -109,10 +109,10 @@
 
     .card-coupon & {
         @include textShadow;
-        font-size: 47px;
         font-weight: $fontBold;
         position: relative;
         padding-bottom: $gutter/2;
+        font-size: 32px;
         &:after {
             content: '';
             background: $colorLight;
@@ -123,6 +123,10 @@
             margin: auto;
             height: 4px;
             width: 75px;
+        }
+
+        @include desktop {
+            font-size: 47px;
         }
     }
 

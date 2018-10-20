@@ -126,7 +126,7 @@ let Testimonials = {
 
         // We fill up the last spot with an add review card.
         let addReviewCard = [
-            '<div class="col mb-4">',
+            '<div class="col-sm-6 col-md-4 mb-4">',
                 '<div class="card card-shadow card-action color-secondary">',
                     '<a href="' + this.addReviewUrl + '" target="_blank" class="card-body">',
                         '<div class="card-icon"><i class="fas fa-plus"></i></div>',
@@ -146,7 +146,7 @@ let Testimonials = {
      */
     reviewTemplate() {
         return [
-            '<div class="col">',
+            '<div class="col-sm-6 col-md-4">',
                 '<div class="card card-shadow card-testimonial">',
                     '<div class="card-body">',
                         '<div class="row no-gutters mb-3">',

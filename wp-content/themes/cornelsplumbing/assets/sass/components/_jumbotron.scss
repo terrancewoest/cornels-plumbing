@@ -1,0 +1,24 @@
+.jumbotron-404 {
+
+    .subtitle {
+        font-size: 18px;
+        padding: $gutter/3;
+        background: $colorDark;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $colorLight;
+        display: inline-block;
+        font-weight: $fontBold;
+        margin-bottom: $gutter;
+    }
+
+    h1 {
+        font-weight: $fontBold;
+        color: $colorGrayDarker;
+        margin-bottom: $gutter;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}

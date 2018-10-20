@@ -7,8 +7,12 @@
         max-height: 100%;
         max-width: 100%;
         margin: $gutter auto;
-        @include tablet {
+
+        @include desktop {
             margin-right: $gutter*2;
+            width: 300px;
+        }
+        @include largeDesktop {
             width: 380px;
         }
     }
@@ -21,6 +25,13 @@
         img {
             max-height: 100%;
             max-width: 100%;
+        }
+
+        @include tablet {
+            display: none;
+        }
+        @include desktop {
+            display: flex;
         }
     }
 }

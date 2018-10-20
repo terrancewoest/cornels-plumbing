@@ -82,11 +82,28 @@
         height: 50px;
         line-height: 50px - 4px;
         font-weight: $fontBold;
-        &:not(:last-child) {
-            margin-bottom: $gutter/2;
+        margin-bottom: $gutter/2;
+
+        &:last-child {
+            @include tablet {
+                margin-left: $gutter/3;
+            }
+            @include desktop {
+                margin-left: 0;
+            }
         }
         @include tablet {
+            vertical-align: middle;
+            display: inline-block;
             font-size: 22px;
+            padding: 0 $gutter/3;
+        }
+        @include desktop {
+            display: block;
+            width: 380px;
+            margin-right: 0;
+        }
+        @include largeDesktop {
             width: 480px;
         }
     }

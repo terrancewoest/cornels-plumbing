@@ -13,7 +13,7 @@
                 <div class="col-sm-4 mb-4">
                     <a href="/drain-cleaning" class="feature feature-hover">
                         <div class="feature-icon">
-                            <i class="fas fa-users"></i>
+                            <?php include get_template_directory() . '/assets/images/icon-drain-cleaning.svg'; ?>
                         </div>
                         <h4>Drain Cleaning</h4>
                     </a>
@@ -22,7 +22,7 @@
                 <div class="col-sm-4 mb-4">
                     <a href="/plumbing" class="feature feature-hover">
                         <div class="feature-icon">
-                            <i class="fas fa-users"></i>
+                            <?php include get_template_directory() . '/assets/images/icon-plumbing.svg'; ?>
                         </div>
                         <h4>Plumbing</h4>
                     </a>
@@ -31,7 +31,7 @@
                 <div class="col-sm-4 mb-4">
                     <a href="/sewer-repair" class="feature feature-hover">
                         <div class="feature-icon">
-                            <i class="fas fa-users"></i>
+                            <?php include get_template_directory() . '/assets/images/icon-sewer-repair.svg'; ?>
                         </div>
                         <h4>Sewer Repair</h4>
                     </a>
@@ -42,7 +42,7 @@
                 <div class="col-sm-4 mb-4">
                     <a href="/water-services" class="feature feature-hover">
                         <div class="feature-icon">
-                            <i class="fas fa-users"></i>
+                            <?php include get_template_directory() . '/assets/images/icon-water-services.svg'; ?>
                         </div>
                         <h4>Water Services</h4>
                     </a>
@@ -51,7 +51,7 @@
                 <div class="col-sm-4 mb-4">
                     <a href="/water-heaters" class="feature feature-hover">
                         <div class="feature-icon">
-                            <i class="fas fa-users"></i>
+                            <?php include get_template_directory() . '/assets/images/icon-water-heaters.svg'; ?>
                         </div>
                         <h4>Water Heaters</h4>
                     </a>

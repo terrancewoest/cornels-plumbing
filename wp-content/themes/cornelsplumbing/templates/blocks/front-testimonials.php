@@ -23,7 +23,7 @@ $testimonials = apc_fetch('cp_testimonials');
                 <div class="row">
                 <?php foreach($testimonialRow as $testimonial) : ?>
 
-                    <div class="col mb-4">
+                    <div class="col-sm-6 col-md-4 mb-4">
                         <div class="card card-shadow card-testimonial">
                             <div class="card-body">
                                 <div class="row no-gutters mb-3">
@@ -43,7 +43,7 @@ $testimonials = apc_fetch('cp_testimonials');
 
                 <?php endforeach; ?>
                 <?php if ($row == 2) : ?>
-                    <div class="col">
+                    <div class="col-sm-6 col-md-4 mb-4">
                         <div class="card card-shadow card-action color-secondary">
                             <a href="https://search.google.com/local/writereview?placeid=<?php echo cp_config('google.place-id'); ?>" target="_blank" class="card-body">
                                 <div class="card-icon"><i class="fas fa-plus"></i></div>
@@ -73,33 +73,33 @@ $testimonials = apc_fetch('cp_testimonials');
                 <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
-                            <i class="far fa-clock"></i>
+                            <i class="far fa-wrench"></i>
                         </div>
-                        <p>Always on-time and prepared</p>
+                        <p>Quality craftsmanship</p>
                     </div>
                 </div>
                 <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
-                            <i class="far fa-clock"></i>
+                            <i class="far fa-smile-wink"></i>
                         </div>
-                        <p>Always on-time and prepared</p>
+                        <p>Friendly and personable</p>
                     </div>
                 </div>
                 <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
-                            <i class="far fa-clock"></i>
+                            <i class="far fa-box-full"></i>
                         </div>
-                        <p>Always on-time and prepared</p>
+                        <p>Quality sourced materials</p>
                     </div>
                 </div>
                 <div class="col-6 col-sm-2 mb-4">
                     <div class="feature feature-small-icon">
                         <div class="feature-icon color-secondary">
-                            <i class="far fa-clock"></i>
+                            <i class="far fa-handshake-alt"></i>
                         </div>
-                        <p>Always on-time and prepared</p>
+                        <p>Clean and respectful</p>
                     </div>
                 </div>
             </div>

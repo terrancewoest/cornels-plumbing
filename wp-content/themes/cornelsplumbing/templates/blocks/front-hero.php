@@ -6,10 +6,10 @@
     <div class="hero-content d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-sm-auto">
+                <div class="col-lg-auto">
                     <img class="logo logo-hero" src="<?php cp_asset('images/cp-logo-760x439.png'); ?>">
                 </div>
-                <div class="col-sm-auto">
+                <div class="col-lg-auto">
                     <h1>
                         The Portland Metro Area's favorite
                         <span class="highlight">Licensed, Local, and Family Run</span>
