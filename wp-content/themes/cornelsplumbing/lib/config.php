@@ -18,7 +18,7 @@ date_default_timezone_set('America/Los_Angeles');
 function cp_all_config() {
     return [
         'brand' => [
-            'phone' => '(503) 123-1234',
+            'phone' => '(503) 406-4230',
             'email' => 'contact@cornelsplumbing.com',
             'facebook' => 'https://www.facebook.com/cornelsplumbing/',
             'twitter' => 'https://twitter.com/cornelsplumbing/',
