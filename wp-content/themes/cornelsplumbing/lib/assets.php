@@ -30,6 +30,8 @@ function cp_enqueue_assets() {
     // Bootstrap CSS
     wp_enqueue_style('bootstrap-css', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css');
 
+    wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
     // Google Api
     if (is_front_page()) {
         wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=' . cp_config('google.api-key') . '&libraries=places');
