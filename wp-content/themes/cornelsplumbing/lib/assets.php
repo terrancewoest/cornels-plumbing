@@ -16,8 +16,8 @@ add_action('wp_enqueue_scripts', 'cp_enqueue_assets');
  * Handles enqueueing all of the needed
  * scripts and styles for the theme.
  */
-function cp_enqueue_assets() {
-
+function cp_enqueue_assets()
+{
     // Swap local for CDN version of jQuery
     wp_deregister_script('jquery');
     wp_register_script('jquery' , 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, null, true);
@@ -39,7 +39,7 @@ function cp_enqueue_assets() {
 
 
     // Theme's Javascript
-    wp_enqueue_script('cp-js', get_template_directory_uri() . '/dist/app.js?v=6', ['jquery', 'bootstrap'], null, true);
+    wp_enqueue_script('cp-js', versionedAsset('app.js'), ['jquery', 'bootstrap'], null, true);
 
     // Localize the main js file with the CP_Global variable.
     wp_localize_script('cp-js', 'CP_Global', [
@@ -47,6 +47,42 @@ function cp_enqueue_assets() {
     ]);
 
     // Theme's CSS
-    wp_enqueue_style('cp-css', get_template_directory_uri() . '/dist/app.css?v=6', ['bootstrap-css']);
+    wp_enqueue_style('cp-css', versionedAsset('app.css'), ['bootstrap-css']);
 
+}
+
+/**
+ * Helper for getting versioned files from mix manifest.
+ *
+ * @param  string  $path  Path to the asset relative to asset folder.
+ * @return string
+ */
+function versionedAsset($path)
+{
+    // Needs leading slash.
+    $path = substr($path, 0, 1) !== '/' ? "/$path" : $path;
+
+    // Construct all needed paths.
+    $rootPath = get_template_directory();
+    $assetsDir = '/dist';
+    $manifestPath = $rootPath . $assetsDir . '/mix-manifest.json';
+
+    // Get the manifest data.
+    static $manifest;
+    if (!$manifest) {
+        if (!file_exists($manifestPath)) {
+            throw new Exception('The Mix manifest does not exist.');
+        }
+        $manifest = json_decode(file_get_contents($manifestPath), true);
+    }
+
+    // Is the file in
+    if (!array_key_exists($path, $manifest)) {
+        throw new Exception(
+            "Unable to locate Mix file: {$path}. Please check your ".
+            'webpack.mix.js output paths and try again.'
+        );
+    }
+
+    return get_template_directory_uri() . $assetsDir . $manifest[$path];
 }

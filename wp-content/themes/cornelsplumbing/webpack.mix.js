@@ -15,6 +15,4 @@ mix.setPublicPath('dist');
 
 mix.js('assets/js/app.js', 'app.js')
    .sass('assets/sass/app.scss', 'app.css')
-   .browserSync({
-        proxy: 'cornelsplumbing.test',
-   });
+   .version();
