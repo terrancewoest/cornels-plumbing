@@ -9,7 +9,8 @@
         margin: $gutter auto;
 
         @include desktop {
-            margin-right: $gutter*2;
+            margin-right: $gutter;
+            margin-left: $gutter;
             width: 300px;
         }
         @include largeDesktop {

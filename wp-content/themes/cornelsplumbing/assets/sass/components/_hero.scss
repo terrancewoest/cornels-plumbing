@@ -55,9 +55,6 @@
         @include tablet {
             font-size: 24px;
         }
-        @include desktop {
-            text-align: left;
-        }
         @include largeDesktop {
             font-size: 36px;
         }

@@ -9,11 +9,11 @@
                 <div class="col-lg-auto">
                     <img class="logo logo-hero" src="<?php cp_asset('images/cp-logo-760x439.png'); ?>">
                 </div>
-                <div class="col-lg-auto">
+                <div class="col">
                     <h1>
                         The Portland Metro Area's favorite
                         <span class="highlight">Licensed, Local, and Family Run</span>
-                        plumbers for the last 35+ years.
+                        plumbing company!
                     </h1>
                     <a class="btn btn-highlight btn-hero scroll-to header-offset" href="#quote">Schedule a Quote Online</a>
                     <a class="btn btn-outline-dark btn-hero" href="tel:<?php echo cp_config('brand.phone'); ?>">Or just call us: <?php echo cp_config('brand.phone'); ?></a>
