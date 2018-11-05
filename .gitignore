@@ -25,3 +25,4 @@ wp-content/themes/cornelsplumbing/node_modules*
 
 # SFTP
 sftp-config*.json
+.vscode
