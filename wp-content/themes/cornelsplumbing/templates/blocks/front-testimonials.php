@@ -11,7 +11,7 @@ $testimonials = apc_fetch('cp_testimonials');
         <div class="section-block">
             <h2 class="section-tag">Testimonials</h2>
 
-            <h3 class="section-title mb-0">We aim for quick, professional, and quality work. But don't take our word for it! See what our stisfied customers have to say.</h3>
+            <h3 class="section-title mb-0">We aim for quick, professional, and quality work. But don't take our word for it! See what our satisfied customers have to say.</h3>
         </div>
 
         <div class="section-block">
