@@ -20,7 +20,6 @@ $hasImage = has_post_thumbnail($blogPage->ID);
 
     <div class="container">
         <h1 class="page-banner-title"><?php echo get_the_title($blogPage->ID); ?></h1>
-        <p>Some blurb about how taking care of your plumbing saving you money and here are some tips to follow</p>
     </div>
 </div>
 <div class="blog-roll">
