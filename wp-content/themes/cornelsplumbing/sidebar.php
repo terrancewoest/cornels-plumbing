@@ -26,7 +26,7 @@
     <div class="sidebar-block card card-coupon-alt card-clickable text-center">
         <div class="card-body">
             <h4 class="card-title">Limited Time Offer!</h4>
-            <p class="card-text mb-0">We are giving <span class="emphasis">30% off</span> all drain cleaning for first time customers. Call today or schedule online!</p>
+            <p class="card-text mb-0">We are giving <span class="emphasis">10% off</span> all drain cleaning for first time customers. Call today or schedule online!</p>
 
             <a href="tel:<?php echo cp_config('brand.phone'); ?>" class="btn btn-link btn-lg"><?php echo cp_config('brand.phone'); ?></a>
             <a href="#quote" class="btn btn-secondary scroll-to">Schedule Online</a>
