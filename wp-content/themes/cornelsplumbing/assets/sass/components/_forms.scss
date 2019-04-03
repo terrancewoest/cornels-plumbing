@@ -23,6 +23,14 @@
             padding: 0 $gutter/2;
             line-height: $gutter*1.5;
         }
+
+        select {
+            border: none;
+            background: $colorGrayLightest;
+            line-height: $gutter*1.5;
+            height: $gutter*1.5;
+            width: 100%;
+        }
     }
 
     .frm_primary_label,
