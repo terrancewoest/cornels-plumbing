@@ -67,7 +67,7 @@ function cp_phones_closed() {
     }
 
     // In one of the open days of the week (phones stay open 1 day longer)?
-    if (date('w') < cp_config('hours.weekstart') || date('w') > cp_config('hours.weekend') + 1) {
+    if (date('w') < cp_config('hours.weekstart') || date('w') > cp_config('hours.weekend')) {
         $phonesClosed = true;
     }
 
