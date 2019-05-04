@@ -1,3 +1,8 @@
+// Ui and helper functions
+String.prototype.stripSlashes = function(){
+    return this.replace(/\\(.)/mg, "$1");
+}
+
 // Setup Axios Library
 import Axios from 'axios';
 window.axios = Axios
