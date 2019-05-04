@@ -72,7 +72,7 @@ let Testimonials = {
                         author_name: review.author_name,
                         rating: review.rating,
                         relative_time_description: review.relative_time_description,
-                        text: review.text,
+                        text: review.text.stripSlashes,
                     });
                 });
 
