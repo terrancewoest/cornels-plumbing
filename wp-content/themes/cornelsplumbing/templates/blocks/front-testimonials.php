@@ -28,7 +28,7 @@ $testimonials = apc_fetch('cp_testimonials');
                             <div class="card-body">
                                 <div class="row no-gutters mb-3">
                                     <div class="col-auto pr-3">
-                                        <img class="rounded-circle card-image" src="<?php echo $testimonial['profile_photo_url']; ?>">
+                                        <img class="rounded-circle card-img" src="<?php echo $testimonial['profile_photo_url']; ?>">
                                     </div>
                                     <div class="col">
                                         <h5 class="card-title mb-1"><?php echo $testimonial['author_name']; ?></h5>

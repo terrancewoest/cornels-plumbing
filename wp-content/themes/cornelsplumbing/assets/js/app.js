@@ -1,14 +1,9 @@
-// Ui and helper functions
-String.prototype.stripSlashes = function(){
-    return this.replace(/\\(.)/mg, "$1");
-}
-
 // Setup Axios Library
 import Axios from 'axios';
 window.axios = Axios
 
 // Bring in all of the needed icons from fontawesome.
-// import './components/FontAwesome.js';
+import './components/FontAwesome.js';
 
 // Set up the sticky nav.
 import StickyNav from './components/StickyNav.js';

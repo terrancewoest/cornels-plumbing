@@ -72,7 +72,7 @@ let Testimonials = {
                         author_name: review.author_name,
                         rating: review.rating,
                         relative_time_description: review.relative_time_description,
-                        text: review.text.stripSlashes,
+                        text: review.text.replace(/\\(.)/mg, "$1"),
                     });
                 });
 
@@ -151,7 +151,7 @@ let Testimonials = {
                     '<div class="card-body">',
                         '<div class="row no-gutters mb-3">',
                             '<div class="col-auto pr-3">',
-                                '<img class="rounded-circle card-image" src="{image}">',
+                                '<img class="rounded-circle card-img" src="{image}">',
                             '</div>',
                             '<div class="col">',
                                 '<h5 class="card-title mb-1">{name}</h5>',
