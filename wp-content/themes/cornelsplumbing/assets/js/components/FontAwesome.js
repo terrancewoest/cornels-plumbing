@@ -41,6 +41,10 @@ import { library, dom } from '@fortawesome/fontawesome-svg-core';
 // Import Regular icons.
 import {
     faClock as farClock,
+    faWrench as farWrench,
+    faSmileWink as farSmileWink,
+    faBoxFull as farBoxFull,
+    faHandshakeAlt as farHandshakeAlt,
     faAngleRight as farAngleRight,
     faAngleLeft as farAngleLeft,
 } from '@fortawesome/pro-regular-svg-icons';
@@ -69,6 +73,10 @@ library.add(
 
     // Regular Icons
     farClock,
+    farWrench,
+    farSmileWink,
+    farBoxFull,
+    farHandshakeAlt,
     farAngleRight,
     farAngleLeft,
 
