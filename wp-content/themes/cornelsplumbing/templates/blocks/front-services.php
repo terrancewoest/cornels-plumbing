@@ -53,7 +53,7 @@
                         <div class="feature-icon">
                             <?php include get_template_directory() . '/assets/images/icon-water-heaters.svg'; ?>
                         </div>
-                        <h4>Water Heaters</h4>
+                        <h4>Water Heaters / Tankless</h4>
                     </a>
                 </div>
 
