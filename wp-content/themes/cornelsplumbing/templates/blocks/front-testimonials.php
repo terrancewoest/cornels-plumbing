@@ -1,8 +1,10 @@
 <?php
-// Unncomment this as a quick way to clear the cache.
-// apc_delete('cp_testimonials');
-
-$testimonials = apc_fetch('cp_testimonials');
+// Cache buster to rebuild the testimonials cache
+if (isset($_GET['recache_testimonials'])) {
+    $testimonials = [];
+} else {
+    $testimonials = apc_fetch('cp_testimonials');
+}
 ?>
 <section id="testimonials" class="section section-testimonials" data-highlight-nav="testimonials">
     <div class="top-anchor"></div>
@@ -15,14 +17,15 @@ $testimonials = apc_fetch('cp_testimonials');
         </div>
 
         <div class="section-block">
-            <div class="testimonials" data-testimonials data-build="<?php echo apc_fetch('cp_testimonials') ? 'false' : 'true'; ?>"></div>
-            <?php if ($testimonials) : $row = 0; ?>
-            <?php foreach(array_chunk($testimonials, 3) as $testimonialRow) :
+            <div class="testimonials" data-testimonials data-build="<?php echo $testimonials ? 'false' : 'true'; ?>"></div>
+            <?php
+            if ($testimonials) {
+                foreach(array_chunk($testimonials, 3) as $testimonialRow) {
                 $row++;
                 ?>
                 <div class="row">
-                <?php foreach($testimonialRow as $testimonial) : ?>
 
+                    <?php foreach($testimonialRow as $testimonial) { ?>
                     <div class="col-sm-6 col-md-4 mb-4">
                         <div class="card card-shadow card-testimonial">
                             <div class="card-body">
@@ -36,13 +39,13 @@ $testimonials = apc_fetch('cp_testimonials');
                                     </div>
                                 </div>
                                 <p class="card-subtitle mb-1 text-muted">Posted <?php echo $testimonial['relative_time_description']; ?></p>
-                                <p class="card-text"><?php echo $testimonial['text']; ?></p>
+                                <p class="card-text"><?php echo stripslashes($testimonial['text']); ?></p>
                             </div>
                         </div>
                     </div>
+                    <?php } ?>
 
-                <?php endforeach; ?>
-                <?php if ($row == 2) : ?>
+                    <?php if ($row == 2) { ?>
                     <div class="col-sm-6 col-md-4 mb-4">
                         <div class="card card-shadow card-action color-secondary">
                             <a href="https://search.google.com/local/writereview?placeid=<?php echo cp_config('google.place-id'); ?>" target="_blank" class="card-body">
@@ -52,9 +55,11 @@ $testimonials = apc_fetch('cp_testimonials');
                             </a>
                         </div>
                     </div>
-                <?php endif; ?>
+                    <?php } ?>
                 </div>
-            <?php endforeach; endif; ?>
+                <?php
+                }
+            } ?>
             <span class="d-none" id="map-hook">
         </div>
 

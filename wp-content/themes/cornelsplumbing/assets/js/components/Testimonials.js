@@ -146,7 +146,7 @@ let Testimonials = {
      */
     reviewTemplate() {
         return [
-            '<div class="col-sm-6 col-md-4">',
+            '<div class="col-sm-6 col-md-4 mb-4">',
                 '<div class="card card-shadow card-testimonial">',
                     '<div class="card-body">',
                         '<div class="row no-gutters mb-3">',
