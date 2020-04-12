@@ -62,9 +62,10 @@
                 <div class="col-sm-4 mb-5">
                     <h4>Company Info</h4>
                     <nav class="nav flex-column">
+                        <span class="nav-link">Open <?php echo cp_config('hours.formatted'); ?></span>
+                        <span class="nav-link">CCB #226109</span>
                         <a class="nav-link" href="tel:<?php echo cp_config('brand.phone'); ?>"><?php echo cp_config('brand.phone'); ?></a>
                         <a class="nav-link" href="mailto:<?php echo cp_config('brand.email'); ?>"><?php echo cp_config('brand.email'); ?></a>
-                        <span class="nav-link"><?php echo cp_config('hours.formatted'); ?></span>
                     </nav>
 
                     <h4>Connect With Us</h4>
