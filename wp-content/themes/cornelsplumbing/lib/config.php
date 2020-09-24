@@ -31,9 +31,9 @@ function cp_all_config() {
         'hours' => [
             'weekstart' => 1,
             'weekend'   => 5,
-            'timestart' => 9,
-            'timeend'   => 17,
-            'formatted' => 'Monday - Friday | 9am - 5pm',
+            'timestart' => 8,
+            'timeend'   => 16,
+            'formatted' => 'Monday - Friday | 8am - 4pm',
         ],
 
         'google' => [
