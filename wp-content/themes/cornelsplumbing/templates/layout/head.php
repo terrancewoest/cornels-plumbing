@@ -10,6 +10,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/a80f1ca719.js" crossorigin="anonymous"></script>
     <?php
 
     // Google Place Id (used for testimonials)
