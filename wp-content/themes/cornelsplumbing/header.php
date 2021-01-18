@@ -38,7 +38,15 @@
                 <span class="active-icon"><i class="fas fa-caret-up"></i></span>
             </a>
 
-            <span class="nav-link"><a href="#" class="btn btn-outline-primary"><?php echo cp_config('brand.phone'); ?></a></span>
+            <span class="nav-link"><a href="#" class="btn btn-outline-primary">
+                <?php
+                if (is_page('drain-cleaning') || is_page('sewer-repair')) {
+                    echo '(971) 270-4864';
+                } else {
+                    echo cp_config('brand.phone');
+                }
+                ?>
+            </a></span>
             <span class="nav-link"><a href="#quote" class="btn btn-highlight scroll-to header-offset">Schedule Quote</a></span>
         </nav>
 
@@ -78,7 +86,15 @@
                 <span class="active-icon"><i class="fas fa-caret-up"></i></span>
             </a>
 
-            <span class="nav-link"><a href="#" class="btn btn-outline-primary"><?php echo cp_config('brand.phone'); ?></a></span>
+            <span class="nav-link"><a href="#" class="btn btn-outline-primary">
+            <?php
+                if (is_page('drain-cleaning') || is_page('sewer-repair')) {
+                    echo '(971) 270-4864';
+                } else {
+                    echo cp_config('brand.phone');
+                }
+            ?>
+            </a></span>
             <span class="nav-link"><a href="#quote" class="btn btn-highlight scroll-to header-offset">Schedule Quote</a></span>
         </nav>
 
