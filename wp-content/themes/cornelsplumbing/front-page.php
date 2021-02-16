@@ -14,7 +14,7 @@ get_template_part('templates/blocks/front-services');
 get_template_part('templates/blocks/front-testimonials');
 
 // Coupon
-get_template_part('templates/blocks/front-coupon');
+// get_template_part('templates/blocks/front-coupon');
 
 // About
 get_template_part('templates/blocks/front-about');
