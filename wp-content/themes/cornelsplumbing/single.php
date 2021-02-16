@@ -69,9 +69,11 @@ $last_post = get_previous_post();
                 </div>
             </article>
 
+            <?php /*
             <aside class="col-lg-auto">
                 <?php get_sidebar(); ?>
             </aside>
+            */ ?>
         </div>
     </div>
 </div>

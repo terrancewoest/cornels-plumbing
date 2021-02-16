@@ -36,9 +36,11 @@ $hasImage = has_post_thumbnail($blogPage->ID);
             ?>
             </div>
 
+            <?php /*
             <aside class="col-lg-auto">
                 <?php get_sidebar(); ?>
             </aside>
+            */ ?>
         </div>
     </div>
 </div>
