@@ -110,7 +110,7 @@ if (isset($_GET['recache_testimonials'])) {
             </div>
 
             <p class="section-text">
-                We only work with the best materials available and provide a 1 year guarantee on all labor. We never compromise quality for time and give all our clients realistic schedules that accommodate their lives. We strive for honest customer service, so contracts are only paid in full when the finished work is to your complete satisfaction.
+                We only work with the best materials available and provide a 3 year guarantee on all labor. We never compromise quality for time and give all our clients realistic schedules that accommodate their lives. We strive for honest customer service, so contracts are only paid in full when the finished work is to your complete satisfaction.
             </p>
         </div>
     </div>
