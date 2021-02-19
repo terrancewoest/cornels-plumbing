@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="col-sm-4 mb-4">
-                    <a href="/sewer-repair" class="feature feature-hover">
+                    <a href="/sewer-line-repair/" class="feature feature-hover">
                         <div class="feature-icon">
                             <?php include get_template_directory() . '/assets/images/icon-sewer-repair.svg'; ?>
                         </div>
