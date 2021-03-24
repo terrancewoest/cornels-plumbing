@@ -30,6 +30,9 @@
                 <a href="/plumbing-sherwood">Sherwood</a>
                 <a href="/plumbing-tigard">Tigard</a>
                 <a href="/plumbing-west-linn">West Linn</a>
+                <p class="mt-4">
+                Are looking for plumbers in <b>Redmond, OR</b>? Check out our trusted friends <a href="https://www.plumbersredmondoregon.com/" target="_blank" rel="noopener">Plumbers Redmond Oregon</a>
+                </p>
             </div>
 
             <div class="row">
