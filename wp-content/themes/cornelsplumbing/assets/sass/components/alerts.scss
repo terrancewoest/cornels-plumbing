@@ -1,0 +1,15 @@
+.alert {
+
+    &.alert-highlight {
+        background: rgba($colorHighlight, .16);
+
+        b {
+            font-weight: 800;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+}

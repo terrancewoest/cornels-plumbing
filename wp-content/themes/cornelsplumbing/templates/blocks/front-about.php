@@ -22,6 +22,12 @@
             </div>
         </div>
 
+        <div class="py-4">
+            <p class="alert alert-highlight my-5 text-center lead py-4">
+                Are looking for plumbers in <b>Redmond, OR</b>? Check out our trusted friends <a href="https://www.plumbersredmondoregon.com/" target="_blank" rel="noopener">Plumbers Redmond Oregon</a>.
+            </p>
+        </div>
+
         <div class="instagram-feed text-center">
             <h2 class="section-tag">Social Media</h2>
             <h3 class="section-title">
