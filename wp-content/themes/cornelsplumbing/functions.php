@@ -14,6 +14,7 @@ $includes = [
     'thumbnails.php',       // Register all of the needed thumbnail sizes.
     'ajax.php',              // Anything api related.
     'helpers.php',          // Miscellaneous theme helper functions
+    'shortcodes.php',
 ];
 
 // Include all of the globally required files
