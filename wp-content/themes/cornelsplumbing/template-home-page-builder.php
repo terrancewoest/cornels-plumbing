@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Page Builder
+Template Name: Home Page Builder
 */
 
 // Use the home page header.
