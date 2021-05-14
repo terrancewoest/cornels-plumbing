@@ -1,8 +1,11 @@
 <?php
 
 /*
-Template Name: Home Page Builder
+Template Name: Page Builder
 */
+
+// Use the home page header.
+get_header('front');
 
 if (have_posts()) {
     while (have_posts()) {
@@ -11,5 +14,8 @@ if (have_posts()) {
         the_content();
     }
 }
+
+get_footer();
+
 ?>
 
