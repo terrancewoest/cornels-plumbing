@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Home Page Builder
+Template Name: Page Builder
 */
 
 if (have_posts()) {
