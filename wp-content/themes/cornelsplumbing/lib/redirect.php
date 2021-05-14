@@ -56,8 +56,12 @@ function cp_base_template_include($template) {
     // Default template wrapper.
     $wrapperBaseTemplate = 'base.php';
 
-    // Front page and empty page template need the empty base file
-    if (is_front_page() || basename($template) == 'template-empty-page.php') {
+    // These pages need the empty base page.
+    if (
+        is_page('home-page') || // Old archived home page.
+        basename($template) == 'template-empty-page.php' || // Empty page builder template
+        basename($template) == 'template-home-page-builder.php' // Home page builder template.
+    ) {
         $wrapperBaseTemplate = 'base-empty.php';
     }
 
