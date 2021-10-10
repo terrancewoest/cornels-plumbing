@@ -15,8 +15,8 @@ $phonesClosed = cp_phones_closed();
                 <span class="ml-2 badge badge-danger">CLOSED</span>
             <?php endif; ?>
         </p>
-        <p class="topbar-phone"><?php echo cp_config('brand.phone'); ?></p>
-        <p class="topbar-email"><?php echo cp_config('brand.email'); ?></p>
+        <p class="topbar-phone"><a href="tel:<?php echo cp_page_contact_number(); ?>"><?php echo cp_page_contact_number(); ?></a></p>
+        <p class="topbar-email"><a href="mailto:<?php echo cp_config('brand.email'); ?>"><?php echo cp_config('brand.email'); ?></a></p>
         <p class="topbar-social">
             <a href="<?php echo cp_config('brand.facebook'); ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a href="<?php echo cp_config('brand.twitter'); ?>" target="_blank"><i class="fab fa-twitter-square"></i></a>
