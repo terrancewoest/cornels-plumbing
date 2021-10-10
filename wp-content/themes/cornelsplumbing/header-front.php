@@ -41,7 +41,11 @@
                 Cornel's Tips &amp; Tricks
                 <span class="active-icon"><i class="fas fa-caret-up"></i></span>
             </a>
-            <span class="nav-link d-md-none d-xl-flex"><a href="#" class="btn btn-outline-primary"><?php echo cp_config('brand.phone'); ?></a></span>
+            <span class="nav-link d-md-none d-xl-flex">
+                <a href="tel:<?php echo cp_page_contact_number(); ?>" class="btn btn-outline-primary">
+                    <?php echo cp_page_contact_number(); ?>
+                </a>
+            </span>
             <span class="nav-link"><a href="#quote" class="btn btn-highlight scroll-to header-offset">Schedule Quote</a></span>
         </nav>
 
