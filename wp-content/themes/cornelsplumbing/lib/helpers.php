@@ -78,3 +78,17 @@ function cp_phones_closed() {
 
     return $phonesClosed;
 }
+
+/**
+ * Gets the contact number based on the current page.
+ */
+function cp_page_contact_number()
+{
+    if (is_page('drain-cleaning-portland') || is_page('sewer-repair-portland')) {
+        $contactNumber = '(971) 270-4864';
+    } else {
+        $contactNumber = cp_config('brand.phone');
+    }
+
+    return $contactNumber;
+}
