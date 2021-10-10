@@ -11,7 +11,7 @@
         <div class="section-block">
             <div class="row">
                 <div class="col-sm-4 mb-4">
-                    <a href="/drain-cleaning" class="feature feature-hover">
+                    <a href="/drain-cleaning-portland" class="feature feature-hover">
                         <div class="feature-icon">
                             <?php include get_template_directory() . '/assets/images/icon-drain-cleaning.svg'; ?>
                         </div>
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="col-sm-4 mb-4">
-                    <a href="/sewer-line-repair/" class="feature feature-hover">
+                    <a href="/sewer-repair-portland" class="feature feature-hover">
                         <div class="feature-icon">
                             <?php include get_template_directory() . '/assets/images/icon-sewer-repair.svg'; ?>
                         </div>

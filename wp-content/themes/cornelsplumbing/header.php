@@ -25,9 +25,9 @@
                     <span class="active-icon"><i class="fas fa-caret-up"></i></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                    <a class="dropdown-item" href="/drain-cleaning">Drain Cleaning</a>
+                    <a class="dropdown-item" href="/drain-cleaning-portland">Drain Cleaning</a>
                     <a class="dropdown-item" href="/plumbing">Plumbing</a>
-                    <a class="dropdown-item" href="/sewer-line-repair">Sewer Repair</a>
+                    <a class="dropdown-item" href="/sewer-repair-portland">Sewer Repair</a>
                     <a class="dropdown-item" href="/water-services">Water Services</a>
                     <a class="dropdown-item" href="/water-heaters">Water Heaters</a>
                 </div>
@@ -67,10 +67,10 @@
                     <span class="active-icon"><i class="fas fa-caret-up"></i></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="servicesDropdownSticky">
-                    <a class="dropdown-item" href="/drain-cleaning">Drain Cleaning</a>
+                    <a class="dropdown-item" href="/drain-cleaning-portland">Drain Cleaning</a>
                     <a class="dropdown-item" href="/plumbing">Plumbing</a>
-                    <a class="dropdown-item" href="/sewer-repair">Sewer Repair</a>
-                    <a class="dropdown-item" href="#">Water Services</a>
+                    <a class="dropdown-item" href="/sewer-repair-portland">Sewer Repair</a>
+                    <a class="dropdown-item" href="/water-services">Water Services</a>
                     <a class="dropdown-item" href="/water-heaters">Water Heaters</a>
                 </div>
             </div>
